@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talks — Ondrej Krajicek</title>
+<style>
+  :root {
+    --ink: #111; --body: #1f1f1f; --muted: #6a6a6a;
+    --ground: #fbfbf9; --rule: #d8d8d4; --accent: #8c1d1d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 12vh 6vw 16vh;
+    background: var(--ground); color: var(--body);
+    font: 400 18px/1.5 "Source Serif 4", Charter, Georgia, serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 {
+    font: 600 2.1rem/1.1 "Inter", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: -0.02em; color: var(--ink); margin: 0;
+  }
+  h1::after {
+    content: ""; display: block; width: 2.2em; height: 2px;
+    background: var(--accent); margin-top: .42em;
+  }
+  .lede { color: var(--muted); margin: 1.4em 0 3.4em; }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { border-top: 1px solid var(--rule); padding: 1.5rem 0; }
+  li:last-child { border-bottom: 1px solid var(--rule); }
+  time {
+    display: block;
+    font: 500 .8rem/1 "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-variant-numeric: tabular-nums; color: var(--muted);
+    letter-spacing: .04em; margin-bottom: .5rem;
+  }
+  a.deck {
+    font: 600 1.25rem/1.25 "Inter", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: -0.01em; color: var(--ink);
+    text-decoration: none; border-bottom: 2px solid transparent;
+  }
+  a.deck:hover { border-bottom-color: var(--accent); }
+  .extras {
+    margin-top: .55rem;
+    font: 400 .85rem/1 "Inter", "Helvetica Neue", Arial, sans-serif;
+  }
+  .extras a { color: var(--accent); text-decoration: none; margin-right: 1.1rem; }
+  .extras a:hover { text-decoration: underline; }
+  footer {
+    margin-top: 5rem; color: var(--muted);
+    font: 400 .8rem/1.5 "Inter", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #f2f2ef; --body: #dcdcd8; --muted: #9a9a94;
+      --ground: #141413; --rule: #33332f; --accent: #d98080;
+    }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Talks</h1>
+  <p class="lede">Presentations by Ondrej Krajicek. Each deck runs offline once
+  opened and can be installed as an app.</p>
+  <ul>
+    <li><em>No talks published yet.</em></li>
+  </ul>
+  <footer>Built from a private vault. 0 talks.</footer>
+</main>
+</body>
+</html>
