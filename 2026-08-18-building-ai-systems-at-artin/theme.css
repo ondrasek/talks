@@ -220,6 +220,16 @@
   color: var(--muted); max-width: 34em;
 }
 
+/* Downloads card — the closing take-it-with-you slide. Sits on a dark slide,
+   so the palette arrives through the section remap; these rules set only
+   layout and the link affordance. */
+.reveal .downloads { display: flex; flex-direction: column; gap: 0.5em; margin: 0.2em 0 1.2em; }
+.reveal .downloads a {
+  font-family: var(--font-display); font-size: 0.62em; font-weight: 600;
+  color: var(--ink); border-bottom: 1px solid var(--rule);
+  text-decoration: none; width: fit-content; padding-bottom: 0.1em;
+}
+
 /* ---------- Numerals ---------- */
 
 .reveal .num {
