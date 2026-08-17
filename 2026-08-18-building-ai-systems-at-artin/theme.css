@@ -1,0 +1,431 @@
+/* ------------------------------------------------------------------------
+ * Swiss — the house reveal.js theme for talks.
+ *
+ * Modelled on the PV260 "AI and Software Architecture" deck, which Ondra
+ * identified as the target for both style and content. The choices taken from
+ * it, and why each matters:
+ *
+ *   MONOCHROME BY DEFAULT. The reference deck uses no colour at all, and
+ *   contrast and typography carry the hierarchy. Three accents exist — red,
+ *   green, blue — but they are SEMANTIC and scarce: what fails, what holds,
+ *   what deserves a second look. They never fill a background, never draw a
+ *   rule, and a slide should rarely carry more than one. The earlier theme had
+ *   a single red doing decorative work on every title; that is the failure
+ *   this rule exists to prevent.
+ *
+ *   BLACK AND WHITE ALTERNATION. Cover, part dividers and takeaways are pure
+ *   black; content slides white. The switch marks structure without spending a
+ *   word on navigation.
+ *
+ *   SERIF TITLES, SANS BODY. Titles are serif ROMAN on light slides and serif
+ *   ITALIC on dark ones. That inversion is what makes a divider read as a
+ *   different KIND of slide at a glance, before it is read at all.
+ *
+ *   LETTERSPACED CAPS KICKERS. Every content slide names its section above the
+ *   title, so a listener who looked away knows where they are.
+ *
+ * NO WEBFONTS. The runner carries fonts-inter, fonts-liberation2 and
+ * fonts-jetbrains-mono, so the PDF renders in the intended faces. A viewer
+ * without them falls back to Helvetica/Georgia — the same design, different
+ * cut. Vendoring woff2 into .github/ was rejected: it is mirrored publicly.
+ * ------------------------------------------------------------------------*/
+
+:root {
+  --ink:      #111111;
+  --body:     #1f1f1f;
+  --muted:    #6f6f6f;
+  --faint:    #8a8a8a;   /* 3.4:1 on white — #9a9a9a was 2.8:1 and the slide
+                            number is the smallest type in the deck */
+  --ground:   #ffffff;
+  --rule:     #d8d8d4;
+
+  /* Accents. Semantic only, never decorative — a slide should rarely carry
+     more than one. Values shared with .github/scripts/pdf-export.css so the
+     deck and its handout read as one family, and chosen dark enough to survive
+     a washed-out projector and to stay distinguishable in greyscale print. */
+  --pos:  #2e7d32;   /* holds, confirmed, works */
+  --neg:  #c62828;   /* fails, risk, caveat, does not hold */
+  --neu:  #1f4e79;   /* neutral emphasis, a figure worth looking at */
+
+  /* Every light token above needs a counterpart here, because dark slides
+     REMAP the tokens rather than restate the selectors (see below). A light
+     token with no counterpart is a colour that will be painted on black at
+     whatever value it had — which is how `.rows .term` (--ink, #111111) and
+     `.rows .desc` (--body, #1f1f1f) reached the takeaways slide at roughly
+     1.2:1 against the background. test-talk-theme-contrast.py fails if this
+     list ever falls behind :root again. */
+  --dark-ground: #000000;
+  --dark-ink:    #ffffff;
+  --dark-body:   #e6e6e6;
+  --dark-muted:  #a8a8a8;
+  --dark-faint:  #8a8a8a;
+  --dark-rule:   #4a4a4a;
+
+  /* Accents re-lightened for a black ground. The light values are chosen to
+     survive a washed-out projector on white and are far too dark on black. */
+  --dark-pos: #6abf69;
+  --dark-neg: #ef6c6c;
+  --dark-neu: #7fb0e0;
+
+  --font-display: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif:   "Source Serif 4", "Charter", Georgia, "Liberation Serif", serif;
+  --font-mono:    "JetBrains Mono", "SF Mono", ui-monospace, "Courier New", monospace;
+
+  --margin-x: 78px;
+  --margin-y: 58px;
+}
+
+.reveal-viewport { background: var(--ground); }
+
+.reveal {
+  font-family: var(--font-display);
+  /* 26px → 30px. Slides are top-aligned against a full-height section, so a
+     median slide left roughly the bottom 40% of the canvas empty. Growing the
+     scale fills it without moving the title, which keeps the one thing the
+     alignment was protecting: a heading on the same line on every slide.
+     Every increase here moves some slide closer to the bottom edge, and a slide
+     does not scroll — talk-check-overflow.py is what makes that visible instead
+     of silent. Do not raise this without reading its output. */
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.reveal .slides { text-align: left; }
+
+.reveal .slides section {
+  padding: var(--margin-y) var(--margin-x) 74px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* ---------- Kicker ---------- */
+
+.reveal .kicker {
+  font-family: var(--font-display);
+  font-size: 0.42em;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.1em;
+}
+
+/* ---------- Titles ---------- */
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;            /* roman, not bold — weight is not the hierarchy */
+  font-style: normal;
+  color: var(--ink);
+  line-height: 1.12;
+  letter-spacing: -0.005em;
+  text-transform: none;
+  text-shadow: none;
+  margin: 0 0 0.7em;
+}
+
+.reveal h1 { font-size: 1.95em; }
+.reveal h2 { font-size: 1.72em; }
+.reveal h3 { font-size: 1.15em; }
+
+.reveal .lede {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.86em;
+  line-height: 1.45;
+  color: var(--muted);
+  margin: 0 0 1.4em;
+  max-width: 46em;
+}
+
+/* ---------- Dark slides ----------
+ *
+ * REMAP THE TOKENS, DO NOT RESTATE THE SELECTORS.
+ *
+ * This block used to be a parallel list: `.dark .kicker`, `.part .lede`,
+ * `.takeaways strong`, one selector per class that needed a different colour on
+ * black. A parallel list is a thing you have to remember to extend, and it
+ * drifted the first time the layout vocabulary grew. Two symptoms shipped:
+ *
+ *   - `section.cover .lede` was simply absent from the list, so the cover's
+ *     subtitle fell through to the light --muted (#6f6f6f on black, 3.9:1);
+ *   - `.rows` was added later and never got a dark entry at all, so the
+ *     takeaways slide painted .term at --ink (#111111) and .desc at --body
+ *     (#1f1f1f) — about 1.2:1, which is black text on a black slide.
+ *
+ * Custom properties cascade, so redefining the palette on the section makes
+ * every `var(--muted)` inside it resolve to the dark value, including in rules
+ * written later by someone who has never read this comment. That is the whole
+ * point: correctness by default rather than by diligence.
+ *
+ * Consequence to keep in mind: every token in :root needs a --dark-*
+ * counterpart, and test-talk-theme-contrast.py enforces exactly that. */
+.reveal section.dark,
+.reveal section.cover,
+.reveal section.part,
+.reveal section.takeaways {
+  --ink:    var(--dark-ink);
+  --body:   var(--dark-body);
+  --muted:  var(--dark-muted);
+  --faint:  var(--dark-faint);
+  --ground: var(--dark-ground);
+  --rule:   var(--dark-rule);
+  --pos:    var(--dark-pos);
+  --neg:    var(--dark-neg);
+  --neu:    var(--dark-neu);
+  color: var(--body);
+}
+
+/* Style, not colour — the colour now arrives through the remap above. Serif
+   italic on a dark slide is what makes a divider read as a different KIND of
+   slide before it is read at all. */
+.reveal section.dark h1, .reveal section.dark h2, .reveal section.dark h3,
+.reveal section.cover h1, .reveal section.cover h2,
+.reveal section.part h1, .reveal section.part h2,
+.reveal section.takeaways h1, .reveal section.takeaways h2 {
+  font-style: italic;
+}
+
+/* A tick, not an underline. One rule for both grounds — --rule is remapped. */
+.reveal .rule { width: 150px; height: 1px; background: var(--rule); margin: 0.9em 0 1.5em; border: 0; }
+
+/* ---------- Cover ---------- */
+
+.reveal section.cover, .reveal section.part, .reveal section.takeaways {
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.reveal .author-block {
+  font-family: var(--font-display);
+  font-size: 0.52em; line-height: 1.65; color: var(--muted); margin-top: 0.4em;
+}
+.reveal .author-block .name {
+  display: block; font-weight: 700; font-size: 1.24em;
+  color: var(--ink); margin-bottom: 0.3em;
+}
+.reveal .author-block a { color: var(--muted); border-bottom: none; }
+.reveal .author-block .built {
+  display: block; margin-top: 0.45em;
+  font-variant-numeric: tabular-nums; opacity: 0.75;
+}
+
+/* Attribution: present and legible, but never competing with the title. It sits
+   below the build stamp on the cover and wraps rather than pushing the block
+   wider, so a longer sentence cannot shove the author details off the slide. */
+.reveal .author-block .attribution {
+  display: block; margin-top: 0.5em;
+  font-size: 0.86em; line-height: 1.45;
+  color: var(--muted); max-width: 34em;
+}
+
+/* ---------- Numerals ---------- */
+
+.reveal .num {
+  font-family: var(--font-serif); font-style: italic;
+  font-size: 1.35em; color: var(--faint); line-height: 1;
+}
+
+/* ---------- Layout vocabulary ---------- */
+
+.reveal .cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 2.6em; margin-top: 0.6em; }
+.reveal .cols-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 3em; margin-top: 0.6em; }
+.reveal .cols-3 .label, .reveal .cols-2 .label {
+  font-weight: 700; font-size: 0.74em; color: var(--ink); margin: 0.9em 0 0.7em; line-height: 1.3;
+}
+.reveal .cols-3 .detail, .reveal .cols-2 .detail { font-size: 0.62em; color: var(--muted); line-height: 1.45; }
+
+.reveal .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3.2em; }
+.reveal .compare .side-b, .reveal .compare .side-b li { color: var(--faint); }
+
+.reveal .rows { display: grid; gap: 1.05em 0; margin-top: 0.4em; }
+.reveal .rows .row { display: grid; grid-template-columns: 3.2em 12em 1fr; align-items: baseline; gap: 0 1.4em; }
+.reveal .rows .term { font-weight: 700; font-size: 0.76em; color: var(--ink); }
+.reveal .rows .desc { font-size: 0.7em; color: var(--body); line-height: 1.5; }
+
+.reveal .kv { display: grid; gap: 0.75em 0; margin-top: 0.4em; }
+.reveal .kv .pair { display: grid; grid-template-columns: 11em 1fr; gap: 0 1.6em; align-items: baseline; }
+.reveal .kv .k { font-weight: 700; font-size: 0.68em; color: var(--ink); }
+.reveal .kv .v { font-size: 0.68em; color: var(--body); line-height: 1.5; }
+
+.reveal .matrix { display: grid; gap: 0.95em 0; margin-top: 0.5em; }
+.reveal .matrix .m-row { display: grid; grid-template-columns: 11em 3.5em 1fr 12em; gap: 0 1.2em; align-items: baseline; }
+.reveal .matrix .src { font-weight: 700; font-size: 0.6em; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+.reveal .matrix .ref { font-size: 0.56em; font-style: italic; color: var(--faint); }
+.reveal .matrix .claim { font-family: var(--font-serif); font-style: italic; font-size: 0.78em; color: var(--ink); }
+.reveal .matrix .kind { font-size: 0.56em; color: var(--muted); line-height: 1.35; }
+
+.reveal .gaps { display: grid; gap: 0.75em 0; margin-top: 0.4em; }
+.reveal .gaps .gap { display: grid; grid-template-columns: 1.6em 1fr 4em; gap: 0 0.6em; }
+.reveal .gaps .dot { font-size: 0.7em; color: var(--ink); line-height: 1.2; }
+.reveal .gaps .gap-term { font-weight: 700; font-size: 0.72em; color: var(--ink); }
+.reveal .gaps .gap-desc { grid-column: 2 / 3; font-size: 0.62em; color: var(--muted); line-height: 1.45; margin-top: 0.25em; }
+.reveal .gaps .ref { font-size: 0.55em; font-style: italic; color: var(--faint); text-align: right; }
+
+.reveal .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 2.4em; margin-top: 0.5em; }
+.reveal .stats .stat {
+  font-family: var(--font-serif); font-weight: 700; font-size: 2.1em;
+  color: var(--ink); line-height: 1.05; font-variant-numeric: tabular-nums;
+}
+.reveal .stats .stat-cap { font-size: 0.58em; color: var(--muted); margin-top: 0.4em; line-height: 1.4; }
+
+.reveal .boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.8em; margin-top: 0.5em; }
+.reveal .box { border: 1px solid var(--ink); padding: 1.1em 1.3em; }
+.reveal .box .box-label { font-size: 0.5em; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.9em; }
+.reveal .box .box-head { font-family: var(--font-serif); font-style: italic; font-size: 0.86em; color: var(--ink); margin-bottom: 0.9em; }
+.reveal .box ul { font-size: 0.62em; margin-left: 1em; }
+/* A black island on a white slide: it cannot inherit the section remap, so it
+   establishes its own. Same mechanism, applied locally — anything nested inside
+   is then correct without a further rule. */
+.reveal .box.filled {
+  --ink: var(--dark-ink); --body: var(--dark-body); --muted: var(--dark-muted);
+  --faint: var(--dark-faint); --rule: var(--dark-rule);
+  --pos: var(--dark-pos); --neg: var(--dark-neg); --neu: var(--dark-neu);
+  background: var(--dark-ground); border-color: var(--dark-ground); color: var(--body);
+}
+
+.reveal .closing {
+  font-family: var(--font-serif); font-style: italic; font-size: 0.82em;
+  color: var(--ink); text-align: center; margin-top: 1.5em;
+}
+
+.reveal .takeaway { display: grid; grid-template-columns: 3.4em 1fr; gap: 0 0.6em; margin-bottom: 1.15em; }
+.reveal .takeaway .t-head { font-family: var(--font-serif); font-style: italic; font-size: 1.05em; color: var(--ink); line-height: 1.25; }
+.reveal .takeaway .t-body { font-size: 0.58em; color: var(--muted); line-height: 1.5; margin-top: 0.45em; }
+
+/* ---------- Semantic accents ---------- */
+
+/* Used on a stat, a term or a single word — to mark what HOLDS, what FAILS and
+   what merely deserves attention. Never as a background, never as a rule,
+   never on a whole slide. The moment two of them appear for non-semantic
+   reasons the deck has started decorating. */
+.reveal .pos { color: var(--pos); }
+.reveal .neg { color: var(--neg); }
+.reveal .neu { color: var(--neu); }
+
+.reveal .stats .stat.pos { color: var(--pos); }
+.reveal .stats .stat.neg { color: var(--neg); }
+.reveal .stats .stat.neu { color: var(--neu); }
+
+.reveal .gaps .gap.neg .gap-term,
+.reveal .rows .row.neg .term { color: var(--neg); }
+.reveal .rows .row.pos .term { color: var(--pos); }
+
+/* A left rule is the least noisy way to tint a block. */
+.reveal .callout { border-left: 2px solid var(--neu); padding-left: 1em; margin: 0.7em 0; }
+.reveal .callout.pos { border-left-color: var(--pos); }
+.reveal .callout.neg { border-left-color: var(--neg); }
+
+/* On black, the print-safe values go muddy — lift them. */
+
+/* ---------- Body copy ---------- */
+
+.reveal p { line-height: 1.5; margin: 0 0 0.65em; font-size: 0.74em; }
+.reveal ul, .reveal ol { display: block; margin: 0 0 0.7em 1.1em; font-size: 0.74em; }
+.reveal li { line-height: 1.5; margin-bottom: 0.45em; }
+.reveal li::marker { color: var(--faint); }
+.reveal strong { font-weight: 700; color: var(--ink); }
+.reveal em { font-style: italic; }
+
+.reveal blockquote {
+  font-family: var(--font-serif); font-style: italic;
+  background: none; box-shadow: none; border-left: 1px solid var(--rule);
+  padding: 0.1em 0 0.1em 1.1em; margin: 0.8em 0; width: auto; color: var(--ink);
+}
+
+/* ---------- Footnotes ---------- */
+
+.reveal .footnotes {
+  position: absolute;
+  left: var(--margin-x); right: var(--margin-x); bottom: 52px;
+  font-family: var(--font-serif); font-style: italic;
+  font-size: 0.44em; line-height: 1.4; color: var(--muted);
+}
+.reveal .footnotes a { color: var(--muted); border-bottom: none; }
+
+/* ---------- Running footer ---------- */
+
+.reveal .deck-footer {
+  position: absolute; left: var(--margin-x); bottom: 26px;
+  font-family: var(--font-display); font-size: 0.42em; color: var(--faint);
+}
+.reveal section.dark .deck-footer, .reveal section.cover .deck-footer,
+.reveal section.part .deck-footer, .reveal section.takeaways .deck-footer { display: none; }
+
+.reveal .slide-number {
+  font-family: var(--font-display); font-size: 15px;
+  font-variant-numeric: tabular-nums; color: var(--faint);
+  background: none; right: 30px; bottom: 22px;
+}
+
+.reveal .controls { color: var(--faint); }
+.reveal .progress { height: 1px; color: var(--ink); background: rgba(0,0,0,0.06); }
+
+/* ---------- Figures ---------- */
+
+.reveal figure.diagram { margin: 0.6em 0; text-align: center; }
+.reveal figure.diagram svg { max-width: 100%; max-height: 50vh; height: auto; background: transparent; }
+.reveal figure.diagram figcaption {
+  font-family: var(--font-serif); font-style: italic;
+  font-size: 0.5em; color: var(--muted); margin-top: 0.45em;
+}
+
+/* ---------- Mathematics ---------- */
+
+.reveal .math-display { margin: 0.7em 0; text-align: center; font-size: 0.88em; }
+.reveal .math-inline { font-size: 0.94em; }
+.reveal .katex { color: var(--ink); }
+
+/* ---------- Tables ---------- */
+
+.reveal table { border-collapse: collapse; font-size: 0.62em; margin: 0.6em 0; width: 100%; }
+.reveal table th {
+  font-family: var(--font-display); font-weight: 600; font-size: 0.92em;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+  text-align: left; border-bottom: 1px solid var(--ink); padding: 0.45em 0.8em 0.45em 0;
+}
+.reveal table td { border-bottom: 1px solid var(--rule); padding: 0.45em 0.8em 0.45em 0; font-variant-numeric: tabular-nums; }
+.reveal table tr:last-child td { border-bottom: none; }
+
+/* ---------- Code ---------- */
+
+.reveal pre { width: 100%; margin: 0.6em 0; box-shadow: none; font-size: 0.46em; line-height: 1.45; }
+.reveal pre code {
+  font-family: var(--font-mono); background: #f6f6f4; border: 1px solid var(--rule);
+  padding: 0.9em 1.1em; max-height: 500px; overflow: auto;
+}
+.reveal code { font-family: var(--font-mono); font-size: 0.9em; }
+
+/* ---------- Links ---------- */
+
+.reveal a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.reveal a:hover { border-bottom-color: var(--ink); }
+.reveal section.dark a { color: var(--ink); border-bottom-color: var(--rule); }
+
+/* ---------- References slide ---------- */
+
+.reveal section.references .ref-list { display: grid; gap: 0.42em 0; margin-top: 0.3em; }
+.reveal section.references .ref-row {
+  display: grid; grid-template-columns: 3.4em 15em 1fr; gap: 0 1.1em;
+  font-size: 0.5em; line-height: 1.4; align-items: baseline;
+}
+.reveal section.references .ref-n { font-style: italic; color: var(--faint); }
+.reveal section.references .ref-who { font-weight: 700; color: var(--ink); }
+.reveal section.references .ref-what { color: var(--body); }
+
+/* ---------- Images ---------- */
+
+.reveal img { max-height: 56vh; border: none; box-shadow: none; background: none; margin: 0.5em 0; }
+
+/* ---------- Motion ---------- */
+
+.reveal .slides section { transition: opacity 180ms ease; }
+@media (prefers-reduced-motion: reduce) { .reveal .slides section { transition: none; } }
+
+/* ---------- Print / decktape ---------- */
+
+@media print {
+  .reveal .progress, .reveal .controls { display: none !important; }
+  .reveal a { border-bottom: none; }
+}
