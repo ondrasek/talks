@@ -230,6 +230,24 @@
   text-decoration: none; width: fit-content; padding-bottom: 0.1em;
 }
 
+/* The payload line — the sentence a slide exists to land, sitting under a .rows
+   or .matrix block. It had no rule at all, so it inherited the default paragraph
+   margin and butted into the block above it.
+   SCOPED TO ADJACENT SIBLINGS ON PURPOSE. `.claim` is overloaded: it is also a
+   CELL class inside .m-row on the consensus slide. A bare `.reveal .claim` rule
+   added 1.5em above all four of those cells, grew the slide by roughly 6em, and
+   pushed it off the bottom — a pre-existing slide broken by a style meant for a
+   new one. The adjacent-sibling form reaches only the slide-level paragraph. */
+.reveal .rows + .claim,
+.reveal .matrix + .claim,
+.reveal .stats + .claim {
+  margin: 1.2em 0 0;
+  font-size: 0.78em;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 44em;
+}
+
 /* ---------- Numerals ---------- */
 
 .reveal .num {
