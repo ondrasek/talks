@@ -455,6 +455,11 @@
 
 .reveal a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
 .reveal a:hover { border-bottom-color: var(--ink); }
+
+/* The closing slide's address lines became anchors so they are clickable in the
+   PDF and on the web. `.reveal a` above would repaint them --ink, and .lede is
+   deliberately --muted: the request was to make them followable, not louder. */
+.reveal .lede a, .reveal .closing a { color: inherit; }
 .reveal section.dark a { color: var(--ink); border-bottom-color: var(--rule); }
 
 /* ---------- References slide ---------- */
