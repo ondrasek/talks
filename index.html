@@ -47,9 +47,17 @@
   .extras a { color: var(--accent); text-decoration: none; margin-right: 1.1rem; }
   .extras a:hover { text-decoration: underline; }
   footer {
-    margin-top: 5rem; color: var(--muted);
-    font: 400 .8rem/1.5 "Inter", "Helvetica Neue", Arial, sans-serif;
+    margin-top: 5rem; padding-top: 1.6rem; border-top: 1px solid var(--rule);
+    color: var(--muted); max-width: 34rem;
+    font: 400 .8rem/1.6 "Inter", "Helvetica Neue", Arial, sans-serif;
   }
+  footer h2 {
+    font-size: .72rem; letter-spacing: .09em; text-transform: uppercase;
+    font-weight: 600; color: var(--muted); margin: 0 0 .9rem;
+  }
+  footer p { margin: 0 0 .85rem; }
+  footer b { color: var(--body); font-weight: 600; }
+  footer .tally { margin: 1.2rem 0 0; }
   @media (prefers-color-scheme: dark) {
     :root {
       --ink: #f2f2ef; --body: #dcdcd8; --muted: #9a9a94;
@@ -75,7 +83,28 @@
       <div class="extras"><a href="2026-08-18-building-ai-systems-at-artin/2026-08-18-building-ai-systems-at-artin-handout.pdf">Handout&nbsp;PDF</a><a href="2026-08-18-building-ai-systems-at-artin/2026-08-18-building-ai-systems-at-artin-slides.pdf">Slides&nbsp;PDF</a><a href="2026-08-18-building-ai-systems-at-artin/2026-08-18-building-ai-systems-at-artin-speaker-notes.pdf">Speaker notes&nbsp;PDF</a></div>
     </li>
   </ul>
-  <footer>Built from a private vault. 2 talks.</footer>
+  <footer>
+    <h2>Colophon</h2>
+    <p>These decks are built by an agentic pipeline running against a private
+    Obsidian vault of about 7,000 notes — reading notes, research reports and working
+    memory, cross-linked and kept under version control.</p>
+    <p>A talk is drafted from notes that already exist. A panel of critics then
+    tries to fail the draft, and it is rewritten until none of them can. They
+    check that every claim carries a source, that each cited span says what it
+    is quoted as saying, and that the register holds from one slide to the
+    next. A headless
+    browser measures every element on every slide to confirm nothing is painted
+    off the bottom edge, because a slide does not scroll and text lost that way
+    is lost silently.</p>
+    <p>Two kinds of citation appear. <b>[S]</b> is external and carries a URL
+    you can follow. <b>[V]</b> is a note from the vault itself, which stays
+    private — so the handout carries a summary of each one along with the
+    external references that note cites. Nothing hides behind a citation you
+    cannot reach.</p>
+    <p>Nothing reaches this page until an automated scan has read every
+    rendered page and document for material that was meant to stay private.</p>
+    <p class="tally">2 talks.</p>
+  </footer>
 </main>
 </body>
 </html>
