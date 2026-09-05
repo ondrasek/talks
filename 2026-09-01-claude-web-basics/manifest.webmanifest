@@ -1,0 +1,33 @@
+{
+  "name": "2026-09-01-claude-web-basics",
+  "short_name": "2026-09-01-\u2026",
+  "description": "A handful of prompting habits plus three pre-built company Claude Web projects (Prompt Engineering, Personalization, LinkedIn posts) are enough for non-technical IDEA StatiCa staff to get real work done with Claude today \u2014 and learning to build and share your own project is what makes that repeatable.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#fbfbf9",
+  "theme_color": "#fbfbf9",
+  "lang": "en",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
