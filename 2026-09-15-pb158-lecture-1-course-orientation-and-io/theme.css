@@ -645,3 +645,18 @@
 
 /* MUNI gold, as a band behind a highlighted figure only — never as text. */
 .reveal .highlight-band { background: #f2d45c; color: var(--ink); }
+
+
+/* Code. The deck ships highlight.js's monokai stylesheet, which colours tokens
+   for a DARK box; the base theme paints the box light, so code came out pale
+   grey on pale grey — near-invisible on a projected slide (2026-09-14). Set
+   the box and every token to the deck's own palette; the two colours that
+   carry meaning in a lecture on I/O are strings and comments. */
+.reveal pre { font-size: 0.5em; }
+.reveal pre code { background: #f3f4ff; border-color: var(--rule); color: var(--body); }
+.reveal pre code .hljs-string, .reveal pre code .hljs-number, .reveal pre code .hljs-literal { color: var(--neu); }
+.reveal pre code .hljs-comment, .reveal pre code .hljs-meta { color: var(--muted); }
+.reveal pre code .hljs-keyword, .reveal pre code .hljs-built_in, .reveal pre code .hljs-title,
+.reveal pre code .hljs-type, .reveal pre code .hljs-function, .reveal pre code .hljs-params { color: var(--ink); }
+.reveal code { color: inherit; }
+.reveal h1 code, .reveal h2 code, .reveal h3 code { font-size: 0.86em; }
