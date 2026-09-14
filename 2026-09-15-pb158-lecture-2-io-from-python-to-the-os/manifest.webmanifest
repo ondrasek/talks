@@ -1,6 +1,6 @@
 {
-  "name": "2026-09-15-pb158-lecture-2-io-from-python-to-the-os",
-  "short_name": "2026-09-15-\u2026",
+  "name": "A: unbuffered \u2014 one call per byte",
+  "short_name": "A: unbuffer\u2026",
   "description": "Every I/O call you write sits several layers above the operating system, and the layers are observable.",
   "start_url": ".",
   "scope": ".",
