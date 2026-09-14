@@ -1,0 +1,33 @@
+{
+  "name": "2026-09-15-pb158-lecture-1-course-orientation-and-io",
+  "short_name": "2026-09-15-\u2026",
+  "description": "This course grades you on whether you can look at what a system actually does, not on whether you can recite what it should do \u2014 and you can already recite more than you can predict.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#fbfbf9",
+  "theme_color": "#fbfbf9",
+  "lang": "en",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
