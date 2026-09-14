@@ -544,74 +544,104 @@
 }
 
 /* ---- theme overlay: fi-muni ---- */
-/* FI MUNI course theme — OVERLAY, not a standalone theme.
+/* FI MUNI course theme — OVERLAY, appended to the base theme by talk-render.sh
+ * (SPEC-WF-TALK-075). Version 2, 2026-09-14.
  *
- * talk-render.sh appends this file to the base theme.css, so everything here
- * wins by cascade order and everything not mentioned is inherited. That keeps
- * this file to a palette and a few type decisions instead of a 24k fork that
- * would drift from the base within two edits.
+ * Version 1 was a palette: it recoloured the semantic tokens (--neu/--pos/--neg)
+ * and set `--font-body`, a token the base theme does not read. The published
+ * PB158 decks therefore looked exactly like the author's personal editorial
+ * theme — italic serif titles, black dividers — with a thin blue rule as the
+ * only trace of the university. That is not a course identity.
+ *
+ * This version changes what the base theme actually reads:
+ *   - `--font-serif` is what h1-h3, .lede, .closing, .footnotes and the quotes
+ *     use; pointing it at Inter makes the whole deck one sans, which is what a
+ *     lecture read while listening to a second language wants.
+ *   - `--dark-ground` is what talk-build-html.py now paints behind cover, part
+ *     and takeaways slides (it used to hard-code black); MUNI blue here makes
+ *     the dividers the university's, and `.box.filled` follows for free.
+ *   - the kicker, rules, table heads, links and progress bar take the blue as
+ *     the deck's one accent; --pos/--neg stay for meaning, never decoration.
  *
  * PALETTE PROVENANCE. Extracted on 2026-09-13 from FI MUNI's own stylesheet,
- * https://www.fi.muni.cz/jvs-2.1/css/style-fi.css — the faculty's live web
- * palette, by frequency: #0000dc (173 uses), #f2d45c (28), #55008b (23),
- * #f01928 (21), #008c78 (10). These are the WEB values. They are not certified
- * against the printed MUNI graphic manual, which is not public; if the manual
- * differs, it wins and this comment should be corrected.
- *
- * TWO BRAND COLOURS ARE DELIBERATELY NOT USED AT THEIR BRAND VALUES. Measured
- * against white with the same formula test-talk-theme-contrast.py uses:
- *   #f01928 red   -> 4.31   below the 4.5 floor for accent text
- *   #008c78 teal  -> 4.18   below the 4.5 floor
- *   #f2d45c gold  -> 1.46   unusable as text at any size
- * The floor is higher than the WCAG web minimum on purpose: a projector in a
- * lit room loses contrast a monitor keeps. Red and teal are therefore darkened
- * to the nearest same-hue value that clears it, and the gold is confined to
- * non-text use. The signature blue needs no adjustment at 10.33.
+ * fi.muni.cz/jvs-2.1/css/style-fi.css, by frequency: #0000dc (173 uses),
+ * #f2d45c (28), #55008b (23), #f01928 (21), #008c78 (10). Web values; the
+ * printed MUNI manual is not public and wins if it differs. Two are darkened
+ * to clear the 4.5 floor on white (test-talk-theme-contrast.py): red #f01928
+ * (4.31) → #b81222 (6.67), teal #008c78 (4.18) → #006b5a (6.46). Gold #f2d45c
+ * (1.46) is never used for text.
  */
 
 :root {
-  /* Near-black rather than pure black: softer on a projector, and the base
-     theme's reasoning for #111111 holds here too. */
+  /* light ground — cool blacks so the blue does not fight a warm ink */
   --ink:    #0a0a14;   /* 18.9:1 — titles */
   --body:   #1a1a24;   /* 15.3:1 — body copy */
-  --muted:  #5c5c6b;   /* 6.3:1  — kickers, ledes, captions */
-  --faint:  #83838f;   /* 3.5:1  — slide numbers */
+  --muted:  #5c5c6b;   /*  6.3:1 — captions, ledes */
+  --faint:  #83838f;   /*  3.5:1 — slide numbers */
   --ground: #ffffff;
-  --rule:   #dcdce4;   /* cool hairline, sits with the blue */
+  --rule:   #dcdce4;
+  --neu:    #0000dc;   /* 10.33 — MUNI blue, brand value, unmodified */
+  --pos:    #006b5a;   /*  6.46 — MUNI teal, darkened */
+  --neg:    #b81222;   /*  6.67 — MUNI red, darkened */
 
-  /* Accents, semantic only. --neu carries MUNI blue and is the deck's
-     signature; it should be the accent a slide reaches for first. */
-  --neu: #0000dc;   /* 10.33 — MUNI primary blue, brand value, unmodified */
-  --pos: #006b5a;   /*  6.46 — MUNI teal, darkened from #008c78 */
-  --neg: #b81222;   /*  6.67 — MUNI red, darkened from #f01928 */
+  /* dark ground = MUNI blue. Every light token has its counterpart, because the
+     base theme remaps var(--X) → var(--dark-X) on dark slides and inside
+     .box.filled; a token without one paints at its light value on blue. */
+  --dark-ground: #0000dc;
+  --dark-ink:    #ffffff;   /* 10.33 on the blue */
+  --dark-body:   #eef0ff;   /*  8.9 */
+  --dark-muted:  #c7ccff;   /*  6.3 */
+  --dark-faint:  #aab1ff;   /*  4.8 */
+  --dark-rule:   #6d7cff;   /* hairlines and the tick, not text */
+  --dark-neu:    #ffffff;   /* emphasis on blue is white */
+  --dark-pos:    #a7f0dc;   /*  7.6 */
+  --dark-neg:    #ffb3ba;   /*  5.7 */
 
-  /* Dark counterparts. The base remaps tokens for dark slides via
-     var(--dark-X), so redefining these is enough — no selector work needed,
-     and a token changed above without its counterpart here would paint at its
-     light value on black. */
-  --dark-ground: #0a0a14;
-  --dark-ink:    #ffffff;
-  --dark-body:   #e8e8f0;
-  --dark-muted:  #a8a8b8;
-  --dark-faint:  #83838f;
-  --dark-rule:   #3a3a4a;
-  --dark-neu:    #7f9cff;   /* 8.10 on the dark ground */
-  --dark-pos:    #4fc4ae;   /* 9.84 */
-  --dark-neg:    #ff6b78;   /* 7.63 */
+  /* One sans. The base reads this for h1-h3, .lede, .closing, blockquote,
+     .footnotes, figcaptions and the matrix claim. */
+  --font-serif: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  /* Streamlined: one family throughout. The base pairs Inter with Source Serif
-     4, which reads as editorial; a lecture deck read while listening to a
-     second language is easier in a single sans. Both faces still ship, so a
-     talk that wants the serif can override this one line. */
-  --font-body: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --margin-y: 64px;
 }
 
-/* A flatter, quieter frame. The base rules under titles are a typographic
-   device from Ondra's personal decks; for a course the accent should mark
-   meaning, not decoration. */
-.reveal h2 { letter-spacing: -0.015em; }
-.reveal .rule { background: var(--neu); height: 3px; }
+/* A bold sans title reads at a smaller size than a light serif one and fills
+   the slide better; the body scale goes up a notch so a 40-word slide is not
+   a paragraph adrift in the top third. The overflow checks stay in force. */
+.reveal { font-size: 32px; }
+.reveal h1, .reveal h2, .reveal h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.08; }
+.reveal h1 { font-size: 1.85em; }
+.reveal h2 { font-size: 1.5em; margin-bottom: 0.6em; }
+.reveal h3 { font-size: 1.05em; }
 
-/* The one place gold earns its keep: a non-text highlight band, where its
-   1.46 contrast is irrelevant because nothing is written on it. */
-.reveal .highlight-band { background: #f2d45c; }
+/* The base italicises divider titles to mark a different KIND of slide; here
+   the blue ground already does that, and an italic sans is a weaker face. */
+.reveal section.dark h1, .reveal section.dark h2, .reveal section.dark h3,
+.reveal section.cover h1, .reveal section.cover h2,
+.reveal section.part h1, .reveal section.part h2,
+.reveal section.takeaways h1, .reveal section.takeaways h2,
+.reveal .lede, .reveal .closing, .reveal blockquote, .reveal .footnotes,
+.reveal figure.diagram figcaption, .reveal .matrix .claim, .reveal .takeaway .t-head,
+.reveal .box .box-head, .reveal .num, .reveal .gaps .ref, .reveal .matrix .ref,
+.reveal section.references .ref-n { font-style: normal; }
+
+/* The blue as the one accent. --neu remaps to white on the blue slides, so
+   every rule below is correct on both grounds without a second selector. */
+.reveal .kicker { color: var(--neu); letter-spacing: 0.2em; font-weight: 700; }
+.reveal .rule { background: var(--neu); height: 4px; width: 110px; margin: 0.7em 0 1.3em; }
+.reveal .closing { color: var(--neu); font-weight: 600; font-size: 0.8em; }
+.reveal .lede { color: var(--body); font-size: 0.82em; }
+.reveal table th { color: var(--neu); border-bottom: 2px solid var(--neu); letter-spacing: 0.06em; }
+.reveal a { border-bottom-color: var(--neu); }
+.reveal a:hover { border-bottom-color: var(--neu); color: var(--neu); }
+.reveal .progress { color: var(--neu); background: rgba(0,0,220,0.08); }
+.reveal .num { color: var(--neu); font-weight: 700; font-size: 1.1em; }
+.reveal .rows .term, .reveal .gaps .gap-term, .reveal .kv .k { color: var(--ink); }
+.reveal .author-block .name { color: var(--ink); }
+
+/* Footnotes and reference rows were set for a serif at 0.44em — too small in
+   a sans, and a projector in a lit room loses the difference. */
+.reveal .footnotes { font-size: 0.52em; }
+.reveal section.references .ref-row { font-size: 0.54em; }
+
+/* MUNI gold, as a band behind a highlighted figure only — never as text. */
+.reveal .highlight-band { background: #f2d45c; color: var(--ink); }
