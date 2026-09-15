@@ -13,6 +13,7 @@ Every I/O call you write sits several layers above the operating system, and the
 | `2026-09-15-pb158-lecture-2-io-from-python-to-the-os-speaker-notes.pdf` | the notes the talk was given from |
 | `index.html` | the deck as a web page — open it in a browser, it works offline |
 | `AGENTS.md`, `CLAUDE.md` | instructions for an AI coding agent, see below |
+| `demo/` | Sections 4 and 5 demo — one program, two jobs — see its own `README.md` |
 
 ## Reading it
 

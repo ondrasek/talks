@@ -12,6 +12,7 @@ here; there is no repository to clone and nothing to fetch.
 | `2026-09-15-pb158-lecture-2-io-from-python-to-the-os-slides.pdf` | What the audience saw, one page per slide. Use it to locate *where* in the talk something was said. |
 | `2026-09-15-pb158-lecture-2-io-from-python-to-the-os-speaker-notes.pdf` | What was said around each slide. Use it when the slide is terse and the reasoning is not on it. |
 | `index.html` | The deck as a web page. Not a useful source for you — it is the same content as the slides PDF. |
+| `demo/` | Sections 4 and 5 demo — one program, two jobs — see its own `README.md` |
 
 Read the handout first. Read the slides when you need slide numbers. Read the
 speaker notes when the handout is thin on a point and you need the spoken
