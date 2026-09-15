@@ -11,7 +11,7 @@ iodemo.exe: iodemo.c
 
 # The Windows half of the matched pair. NtTrace needs no administrator rights.
 trace: iodemo.exe
-	NtTrace -filter NtCreateFile,NtWriteFile,NtClose iodemo.exe iodemo.out
+	NtTrace64 -filter NtCreateFile,NtWriteFile,NtClose iodemo.exe iodemo.out
 
 clean:
 	-del /q iodemo.exe iodemo.obj iodemo.pdb vc140.pdb iodemo.out

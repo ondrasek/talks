@@ -89,6 +89,14 @@ nmake /f Makefile.msvc trace    REM NtTrace -filter NtCreateFile,NtWriteFile,NtC
 Command Prompt — and MSVC ships `nmake`, not GNU make. Hence two makefiles.
 NtTrace needs **no administrator rights**: it is a debugger, not a driver.
 
+**NtTrace needs its `NtTrace.cfg` beside the executable** — the table of
+native entry points for the running Windows version; without it the tracer
+has nothing to break on. Download it from the same release as
+`NtTrace64.exe`. NtTrace ships for x86 and x64 only, no ARM64 build; on an
+ARM64 Windows machine, `NtTrace64.exe` traced an x64-built `iodemo.exe` under
+the x64 emulation layer (Ondra, 2026-09-15). Build the program for x64 there,
+not for ARM64.
+
 ## Captured in the container, 2026-09-15
 
 Docker 29.7, `debian:trixie-slim`, arm64. Verbatim; the tail of each run.
@@ -119,6 +127,45 @@ Three `fwrite` calls under `ltrace`, one `write` under `strace`: the C library
 buffer doing its job, on one screen. `make container-count` printed
 `write operations counted by the kernel: 7` — the program's one write plus
 the loader's; compare two runs, never read one.
+
+## Captured on Windows, 2026-09-15
+
+Built with `nmake /f Makefile.msvc` (x64) and run by Ondra on an ARM64 Windows
+machine under the x64 emulation layer; Windows version not recorded. Verbatim:
+
+```text
+> iodemo.exe --count
+write operations counted by the kernel: 1
+```
+
+One write operation for the whole process: the three `fwrite` calls left the
+buffer as one `WriteFile`, `fclose` added nothing, and — unlike the Linux run,
+where the loader had already made six of the seven — nothing before `main`
+counted as a write operation at all. Same fourteen bytes, same one write,
+two kernels agreeing on the number that matters and disagreeing on what
+surrounds it.
+
+**The Windows half of the matched pair** — `NtTrace64-IODEMO-Output.txt` in
+this folder, 45 lines, run by Ondra the same day with the makefile's `trace`
+target (the three-name filter, `iodemo.exe iodemo.out`). After the loader's
+own `NtCreateFile`/`NtClose` traffic and the `Initial breakpoint`, the
+program's four steps, verbatim:
+
+```text
+NtCreateFile(FileHandle=0xe14f7f958, DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes=0x58:"no-such-file.txt", IoStatusBlock=0xe14f7f990, AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtCreateFile(FileHandle=0xe14f7f958 [0x124], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes=0x58:"iodemo.out", IoStatusBlock=0xe14f7f990 [0/3], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=5, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtWriteFile(FileHandle=0x124, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0xe14f7fb90 [0/0xe], Buffer=0x12b65d78050, Length=0xe, ByteOffset=null, Key=null) => 0
+NtClose(Handle=0x124) => 0
+```
+
+Set beside the Linux four lines above, step for step: the failed open returns
+`-1 ENOENT` on Linux and `0xC0000034` *with* its Win32 translation `[2 '…']`
+on Windows — two error namespaces in one return value; the open yields file
+descriptor `3` on Linux and handle `0x124` on Windows; the write is `14` bytes
+on Linux and `Length=0xe` on Windows — the same fourteen, one call on each
+side for three `fwrite`s; the close is `close(3)` and `NtClose(Handle=0x124)`.
+Every difference is the operating system's. That is the comparison the
+lecture was built around, and it exists now.
 
 ## `--count`
 

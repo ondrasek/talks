@@ -47,7 +47,28 @@ reads.
 - [GetProcessIoCounters (winbase.h) — Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getprocessiocounters)
 - [IO_COUNTERS (winnt.h) — Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-io_counters)
 
+## Captured on Windows, 2026-09-15
+
+Verbatim, run by Ondra from the demo folder (Windows version and Python build
+not recorded; the machine is an ARM64 host, see `../iodemo-c/README.md`):
+
+```text
+> python iocount_win32.py
+write operations before: 0
+write operations after:  1
+the three writes cost:   1 operation(s)
+```
+
+Two things the number says. **Three `f.write` calls cost one write
+operation** — the `BufferedWriter` handed all fourteen bytes down in one call,
+and closing the file added none. And **the counter was 0 before the first
+line ran**: unlike the Linux run (`syscw` was already 9 when `iodemo.py`
+started), the Windows interpreter's start-up had performed no write
+operations at all, so here the before/after subtraction was not needed — but
+it stays in the script, because that is not a promise Windows makes.
+
 ## Status
 
-Not yet run on a Windows machine. The dictionary keys are verified against
-PyWin32's source (`PyWinObject_FromIO_COUNTERS`); the run is not.
+Run once, on 2026-09-15, output above. The dictionary keys were verified
+against PyWin32's source (`PyWinObject_FromIO_COUNTERS`) before the run and
+the run agrees with them.
