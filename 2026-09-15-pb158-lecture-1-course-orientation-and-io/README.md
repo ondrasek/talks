@@ -14,6 +14,7 @@ This course grades you on whether you can look at what a system actually does, n
 | `index.html` | the deck as a web page — open it in a browser, it works offline |
 | `AGENTS.md`, `CLAUDE.md` | instructions for an AI coding agent, see below |
 
+
 ## Reading it
 
 Start with the slides if you were in the room and want the argument back.
