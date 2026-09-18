@@ -60,4 +60,4 @@ can go and check.
 
 ---
 
-I/O from Python to the operating system — Ondřej (Ondra) Krajíček in Czech contexts, Ondrej (Ondra) Krajicek in international ones — me@ondrejkrajicek.com · https://linkedin.com/in/OndrejKrajicek
+PB158 · Lecture 2 — I/O from Python to the operating system — Ondřej (Ondra) Krajíček in Czech contexts, Ondrej (Ondra) Krajicek in international ones — me@ondrejkrajicek.com · https://linkedin.com/in/OndrejKrajicek

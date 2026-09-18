@@ -1,4 +1,4 @@
-# I/O from Python to the operating system
+# PB158 · Lecture 2 — I/O from Python to the operating system
 
 *Faculty of Informatics, Masaryk University (FI MUNI) · 2026-09-15*
 
