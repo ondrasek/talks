@@ -1,4 +1,4 @@
-# Practicum in Operating Systems
+# PB158 · Lecture 1 — Practicum in Operating Systems
 
 *Faculty of Informatics, Masaryk University (FI MUNI) · 2026-09-15*
 

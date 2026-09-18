@@ -60,4 +60,4 @@ can go and check.
 
 ---
 
-Practicum in Operating Systems — Ondřej (Ondra) Krajíček in Czech contexts, Ondrej (Ondra) Krajicek in international ones — me@ondrejkrajicek.com · https://linkedin.com/in/OndrejKrajicek
+PB158 · Lecture 1 — Practicum in Operating Systems — Ondřej (Ondra) Krajíček in Czech contexts, Ondrej (Ondra) Krajicek in international ones — me@ondrejkrajicek.com · https://linkedin.com/in/OndrejKrajicek
