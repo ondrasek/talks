@@ -1,0 +1,33 @@
+{
+  "name": "PB158 \u00b7 Lecture 3 \u2014 Finishing I/O, and advanced I/O",
+  "short_name": "PB158 L3",
+  "description": "Your program never talks to the disk, the network, or another program. It talks to the layer next to it \u2014 and every layer says done about something different.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#fbfbf9",
+  "theme_color": "#fbfbf9",
+  "lang": "en",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

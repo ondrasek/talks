@@ -1,0 +1,122 @@
+Process 20652 starting at 00007FF6B95412A0 with command line: ""C:\Program Files\Python314\python.exe" close_twice.py"
+C:\Program Files\Python314\python.exe
+Loaded DLL at 00007FF9C3290000 ntdll.dll
+Loaded DLL at 00007FF9C1D20000 C:\WINDOWS\System32\xtajit64se.dll
+Loaded DLL at 00007FF9C1380000 C:\WINDOWS\System32\KERNEL32.DLL
+Loaded DLL at 00007FF9BE5D0000 C:\WINDOWS\System32\KERNELBASE.dll
+NtCreateFile(FileHandle=0xed6f0ddd88 [0x88], DesiredAccess=READ_CONTROL|SYNCHRONIZE|0x19f, ObjectAttributes=4:"\Connect", IoStatusBlock=0xed6f0dd7c0 [0/0x18], AllocationSize=null, FileAttributes=0, ShareAccess=7, CreateDisposition=2, CreateOptions=0x20, EaBuffer=0x2c5be57b530, EaLength=0x54b) => 0
+NtClose(Handle=0x98) => 0
+NtClose(Handle=0xb4) => 0
+Loaded DLL at 00007FF9BE160000 C:\WINDOWS\SYSTEM32\apphelp.dll
+NtClose(Handle=0xc0) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xd4) => 0
+NtClose(Handle=0xd4) => 0
+NtClose(Handle=0xd0) => 0
+NtCreateFile(FileHandle=0xed6f0ddba0 [0xd8], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\WINDOWS\AppPatch\01DD2B3C9708CF2D.sysmain.sdb", IoStatusBlock=0xed6f0ddbb0 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=5, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0xd4) => 0
+NtClose(Handle=0xd4) => 0
+NtClose(Handle=0xc0) => 0
+NtClose(Handle=0xd4) => 0
+NtClose(Handle=0xd4) => 0
+NtCreateFile(FileHandle=0xed6f0dd7a0 [0xdc], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\python.exe", IoStatusBlock=0xed6f0dd730 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=1, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0xe0) => 0
+NtClose(Handle=0xdc) => 0
+NtCreateFile(FileHandle=0xed6f0dd5d8 [0xdc], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\python.exe", IoStatusBlock=0xed6f0dd540 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=1, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0xe0) => 0
+NtClose(Handle=0xdc) => 0
+NtClose(Handle=0xc0) => 0
+NtClose(Handle=0xd8) => 0
+NtClose(Handle=0xd0) => 0
+Loaded DLL at 00007FF9BEE00000 C:\WINDOWS\System32\ucrtbase.dll
+Loaded DLL at 00007FF915490000 C:\Program Files\Python314\python314.dll
+NtClose(Handle=0x100) => 0
+NtClose(Handle=0x100) => 0
+Loaded DLL at 00007FF9C0F80000 C:\WINDOWS\System32\WS2_32.dll
+Loaded DLL at 00007FF9C1A20000 C:\WINDOWS\System32\RPCRT4.dll
+Loaded DLL at 00007FF9C0120000 C:\WINDOWS\System32\ADVAPI32.dll
+Loaded DLL at 00007FF9C18D0000 C:\WINDOWS\System32\msvcrt.dll
+Loaded DLL at 00007FF9C1510000 C:\WINDOWS\System32\sechost.dll
+Loaded DLL at 00007FF983550000 C:\Program Files\Python314\VCRUNTIME140.dll
+Loaded DLL at 00007FF99FE40000 C:\WINDOWS\SYSTEM32\VERSION.dll
+Loaded DLL at 00007FF9BE440000 C:\WINDOWS\SYSTEM32\bcrypt.dll
+NtClose(Handle=0xf8) => 0
+NtClose(Handle=0xf8) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xfc) => 0
+NtClose(Handle=0xfc) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xfc) => 0
+NtClose(Handle=0xfc) => 0
+Initial breakpoint
+NtClose(Handle=0x13c) => 0
+NtClose(Handle=0x148) => 0
+NtClose(Handle=0x14c) => 0
+Loaded DLL at 00007FF9BF190000 C:\WINDOWS\System32\bcryptprimitives.dll
+NtClose(Handle=0x158) => 0
+NtCreateFile(FileHandle=0xed6f0de498, DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\pyvenv.cfg", IoStatusBlock=0xed6f0de4d0, AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtCreateFile(FileHandle=0xed6f0de498, DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\pyvenv.cfg", IoStatusBlock=0xed6f0de4d0, AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtCreateFile(FileHandle=0xed6f0de428 [0x15c], DesiredAccess=SYNCHRONIZE|0x80, ObjectAttributes="\??\C:\Program Files\Python314\python.exe", IoStatusBlock=0xed6f0de460 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x4020, EaBuffer=null, EaLength=0) => 0
+NtCreateFile(FileHandle=0xed6f0de338 [0x160], DesiredAccess=SYNCHRONIZE|0x80, ObjectAttributes="\??\MountPointManager", IoStatusBlock=0xed6f0de370 [0/0], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x160) => 0
+NtClose(Handle=0x15c) => 0
+NtCreateFile(FileHandle=0xed6f0de498, DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\python314._pth", IoStatusBlock=0xed6f0de4d0, AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtCreateFile(FileHandle=0xed6f0de498, DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\python._pth", IoStatusBlock=0xed6f0de4d0, AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtCreateFile(FileHandle=0xed6f0de498, DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\python._pth", IoStatusBlock=0xed6f0de4d0, AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtCreateFile(FileHandle=0xed6f0de498, DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\pybuilddir.txt", IoStatusBlock=0xed6f0de4d0, AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtClose(Handle=0x16c) => 0
+NtCreateFile(FileHandle=0xed6f0dbe58 [0x170], DesiredAccess=SYNCHRONIZE|GENERIC_READ|GENERIC_EXECUTE|0x80, ObjectAttributes="\??\C:\WINDOWS\SYSTEM32\tzres.dll", IoStatusBlock=0xed6f0dbe90 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=5, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x174) => 0
+NtClose(Handle=0x170) => 0
+NtCreateFile(FileHandle=0xed6f0dbe58 [0x170], DesiredAccess=SYNCHRONIZE|GENERIC_READ|GENERIC_EXECUTE|0x80, ObjectAttributes="\??\C:\WINDOWS\SYSTEM32\tzres.dll", IoStatusBlock=0xed6f0dbe90 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=5, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x174) => 0
+NtClose(Handle=0x170) => 0
+NtClose(Handle=0x174) => 0
+NtClose(Handle=0x170) => 0
+NtClose(Handle=0x170) => 0
+NtCreateFile(FileHandle=0xed6f0dda18 [0x16c], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\Lib\encodings\__pycache__\__init__.cpython-314.pyc", IoStatusBlock=0xed6f0dda50 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x16c) => 0
+NtClose(Handle=0x16c) => 0
+NtCreateFile(FileHandle=0xed6f0db5e8 [0x170], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\Lib\encodings\__pycache__\aliases.cpython-314.pyc", IoStatusBlock=0xed6f0db620 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x170) => 0
+NtCreateFile(FileHandle=0xed6f0dc2b8 [0x16c], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\Lib\encodings\__pycache__\_win_cp_codecs.cpython-314.pyc", IoStatusBlock=0xed6f0dc2f0 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x16c) => 0
+NtCreateFile(FileHandle=0xed6f0dd1e8 [0x16c], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\Lib\encodings\__pycache__\utf_8.cpython-314.pyc", IoStatusBlock=0xed6f0dd220 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x16c) => 0
+NtCreateFile(FileHandle=0xed6f0dd218 [0x174], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\Lib\encodings\__pycache__\cp1252.cpython-314.pyc", IoStatusBlock=0xed6f0dd250 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x174) => 0
+NtClose(Handle=0x16c) => 0
+NtClose(Handle=0x170) => 0
+NtCreateFile(FileHandle=0xed6f0dcfd8 [0x170], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\Lib\site-packages\pywin32.pth", IoStatusBlock=0xed6f0dd010 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x170) => 0
+NtCreateFile(FileHandle=0xed6f0db548 [0x15c], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\Lib\encodings\__pycache__\utf_8_sig.cpython-314.pyc", IoStatusBlock=0xed6f0db580 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x15c) => 0
+NtClose(Handle=0x160) => 0
+NtClose(Handle=0x158) => 0
+NtClose(Handle=0x170) => 0
+NtClose(Handle=0x158) => 0
+NtCreateFile(FileHandle=0xed6f0db738 [0x158], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Program Files\Python314\Lib\site-packages\win32\lib\__pycache__\pywin32_bootstrap.cpython-314.pyc", IoStatusBlock=0xed6f0db770 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x158) => 0
+NtClose(Handle=0x158) => 0
+NtCreateFile(FileHandle=0xed6f0de1e8 [0x170], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Users\administrator\pb158\demo\close\close_twice.py", IoStatusBlock=0xed6f0de220 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x170) => 0
+NtCreateFile(FileHandle=0xed6f0df2d8 [0x170], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Users\administrator\pb158\demo\close\close_twice.py", IoStatusBlock=0xed6f0df310 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x170) => 0
+NtCreateFile(FileHandle=0xed6f0de5f8 [0x158], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes=0x5c:"closed.txt", IoStatusBlock=0xed6f0de630 [0/3], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=5, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtWriteFile(FileHandle=0x158, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0xed6f0dd380 [0/0x11], Buffer=0xed6f0dd3c8, Length=0x11, ByteOffset=null, Key=null) => 0
+NtClose(Handle=0x158) => 0
+first  close(3): ok
+second close(3): 9 Bad file descriptor
+NtWriteFile(FileHandle=0xa20, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0xed6f0deef0 [0/0x3d], Buffer=0x2c5c7931000, Length=0x3d, ByteOffset=null, Key=null) => 0
+NtClose(Handle=0x174) => 0
+Loaded DLL at 00007FF9BC190000 C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+NtClose(Handle=0x150) => 0
+Process 20652 exit code: 0

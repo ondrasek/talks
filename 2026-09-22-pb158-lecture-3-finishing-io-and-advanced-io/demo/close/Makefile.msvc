@@ -1,0 +1,26 @@
+# nmake /f Makefile.msvc   — x64 Developer Command Prompt
+NTTRACE = C:\Program Files\NtTrace64\NtTrace64.exe
+PYTHON = python
+TRACE = powershell -NoProfile -ExecutionPolicy Bypass -File ..\nttrace-run.ps1 -NtTrace "$(NTTRACE)"
+CC = cl
+CFLAGS = /nologo /W4 /O2
+
+all: close_twice.exe
+
+close_twice.exe: close_twice.c
+	$(CC) $(CFLAGS) close_twice.c
+
+run: close_twice.exe
+	close_twice.exe
+	"$(PYTHON)" close_twice.py
+
+# Under NtTrace64 — a debugger — the second CloseHandle raises instead of failing quietly.
+trace: close_twice.exe
+	$(TRACE) -Out NtTrace64-CLOSE.txt -filter NtCreateFile,NtWriteFile,NtClose close_twice.exe
+	$(TRACE) -Out NtTrace64-CLOSE-PY.txt -filter NtCreateFile,NtWriteFile,NtClose "$(PYTHON)" close_twice.py
+	"$(PYTHON)" ..\nttrace-count.py NtTrace64-CLOSE.txt NtTrace64-CLOSE-PY.txt
+
+trace-py: trace
+
+clean:
+	del /q *.exe *.obj closed.txt 2>nul

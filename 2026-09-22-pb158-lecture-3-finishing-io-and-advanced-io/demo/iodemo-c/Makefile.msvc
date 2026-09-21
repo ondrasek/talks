@@ -1,0 +1,17 @@
+# nmake — Windows, MSVC. Run from a Developer Command Prompt, otherwise cl.exe
+# is not on PATH:  nmake /f Makefile.msvc
+#
+# _CRT_SECURE_NO_WARNINGS: MSVC deprecates fopen in favour of fopen_s. The
+# deprecation is Microsoft-specific and the standard call is the point here.
+
+CFLAGS = /nologo /W4 /Zi /Od /D_CRT_SECURE_NO_WARNINGS
+
+iodemo.exe: iodemo.c
+	cl $(CFLAGS) iodemo.c /Fe:iodemo.exe
+
+# The Windows half of the matched pair. NtTrace needs no administrator rights.
+trace: iodemo.exe
+	NtTrace64 -filter NtCreateFile,NtWriteFile,NtClose iodemo.exe iodemo.out
+
+clean:
+	-del /q iodemo.exe iodemo.obj iodemo.pdb vc140.pdb iodemo.out

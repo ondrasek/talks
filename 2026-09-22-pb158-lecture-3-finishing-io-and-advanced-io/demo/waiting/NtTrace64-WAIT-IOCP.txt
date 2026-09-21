@@ -1,0 +1,968 @@
+Process 9668 starting at 00007FF60F641950 with command line: "wait_iocp.exe 100 2"
+C:\Users\administrator\pb158\demo\waiting\wait_iocp.exe
+Loaded DLL at 00007FF9C3290000 ntdll.dll
+Loaded DLL at 00007FF9C1D20000 C:\WINDOWS\System32\xtajit64se.dll
+Loaded DLL at 00007FF9C1380000 C:\WINDOWS\System32\KERNEL32.DLL
+NtMapViewOfSection(SectionHandle=0x88, ProcessHandle=-1, BaseAddress=0x20fe47b7720 [0x00007ff9c1380000], ZeroBits=0, CommitSize=0, SectionOffset=null, ViewSize=0x20fe47b9eb8 [0x00169000], InheritDisposition=1 [ViewShare], AllocationType=0x00800000, Protect=0x80) => 0
+Loaded DLL at 00007FF9BE5D0000 C:\WINDOWS\System32\KERNELBASE.dll
+NtMapViewOfSection(SectionHandle=0x8c, ProcessHandle=-1, BaseAddress=0x20fe47b7f10 [0x00007ff9be5d0000], ZeroBits=0, CommitSize=0, SectionOffset=null, ViewSize=0x20fe47b7e58 [0x006da000], InheritDisposition=1 [ViewShare], AllocationType=0x00800000, Protect=0x80) => 0
+NtQuerySystemInformation(SystemInformationClass=0x32 [SystemRangeStartInformation], SystemInformation=0x9b88bbdd00, Length=8, ReturnLength=null) => 0
+NtQuerySystemInformation(SystemInformationClass=0 [SystemBasicInformation], SystemInformation=0x7ff9bec10e80, Length=0x40, ReturnLength=null) => 0
+NtCreateSection(SectionHandle=0x9b88bbdb18 [0x94], DesiredAccess=DELETE|READ_CONTROL|WRITE_DAC|WRITE_OWNER|0x1f, ObjectAttributes=null, SectionSize=0x9b88bbdb28 [65536], Protect=4, Attributes=0x08000000, FileHandle=0) => 0
+NtMapViewOfSection(SectionHandle=0x90, ProcessHandle=-1, BaseAddress=0x9b88bbdb20 [0x00007ff31a340000], ZeroBits=0, CommitSize=0, SectionOffset=null, ViewSize=0x9b88bbdb60 [0x00100000], InheritDisposition=2 [ViewUnmap], AllocationType=0x00500000, Protect=2) => 0
+NtGetNlsSectionPtr(SectionType=0xe, SectionData=0, ContextData=null, SectionPointer=0x9b88bbdcd8 [0x0000020fecee0000], SectionSize=null) => 0
+NtGetNlsSectionPtr(SectionType=0xb, SectionData=0x4e4, ContextData=null, SectionPointer=0x9b88bbdc78 [0x0000020fecfd0000], SectionSize=0x9b88bbdc80 [0x00011000]) => 0
+NtGetNlsSectionPtr(SectionType=0xb, SectionData=0x1b5, ContextData=null, SectionPointer=0x9b88bbdc78 [0x0000020fecff0000], SectionSize=0x9b88bbdc80 [0x00011000]) => 0
+NtCreateFile(FileHandle=0x9b88bbdcc8 [0x90], DesiredAccess=READ_CONTROL|SYNCHRONIZE|0x19f, ObjectAttributes=4:"\Connect", IoStatusBlock=0x9b88bbd700 [0/0x18], AllocationSize=null, FileAttributes=0, ShareAccess=7, CreateDisposition=2, CreateOptions=0x20, EaBuffer=0x20fe47bb4e0, EaLength=0x54b) => 0
+NtDeviceIoControlFile(FileHandle=0x90, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x9b88bbdc90 [0/0], IoControlCode=0x00500023, InputBuffer=null, InputBufferLength=0, OutputBuffer=0x9b88bbdc80, OutputBufferLength=8) => 0
+NtSetInformationProcess(ProcessHandle=-1, ProcessInformationClass=0x31 [ProcessOwnerInformation], ProcessInformation=0x9b88bbdc88, Length=8) => 0
+NtDeviceIoControlFile(FileHandle=0x90, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x9b88bbdb30, IoControlCode=0x00500016, InputBuffer=0x9b88bbdb40, InputBufferLength=0x30, OutputBuffer=null, OutputBufferLength=0) => 0xc00700bb [187 'The specified system semaphore name was not found.']
+NtOpenProcessToken(ProcessHandle=-1, DesiredAccess=0x8, TokenHandle=0x9b88bbdb50 [0x94]) => 0
+NtQueryInformationToken(TokenHandle=0x94, TokenInformationClass=0xc [TokenSessionId], TokenInformation=0x9b88bbd4d8, Length=4, ReturnLength=0x9b88bbd4dc [4]) => 0
+NtQueryInformationToken(TokenHandle=0x94, TokenInformationClass=0x1d [TokenIsAppContainer], TokenInformation=0x9b88bbd500, Length=4, ReturnLength=0x9b88bbd4dc [4]) => 0
+NtQueryInformationToken(TokenHandle=0x94, TokenInformationClass=0x2a [TokenPrivateNameSpace], TokenInformation=0x9b88bbd498, Length=4, ReturnLength=0x9b88bbd4dc [4]) => 0
+NtOpenDirectoryObject(DirectoryHandle=0x9b88bbd490 [0x88], DesiredAccess=0xf, ObjectAttributes="\BaseNamedObjects") => 0
+NtQueryInformationToken(TokenHandle=0x94, TokenInformationClass=0x2c [TokenBnoIsolation], TokenInformation=0x9b88bbd7a8, Length=0x120, ReturnLength=0x9b88bbd4dc [0x10]) => 0
+NtClose(Handle=0x94) => 0
+NtCreateMutant(MutantHandle=0x9b88bbdb98 [0x8c], DesiredAccess=DELETE|READ_CONTROL|WRITE_DAC|WRITE_OWNER|SYNCHRONIZE|0x1, ObjectAttributes=0x88:"Local\SM0:9668:304:WilStaging_02", InitialOwner=false) => 0
+NtWaitForSingleObject(Handle=0x8c, Alertable=false, Timeout=null) => 0
+NtOpenSemaphore(SemaphoreHandle=0x9b88bbd8e8, DesiredAccess=DELETE|READ_CONTROL|WRITE_DAC|WRITE_OWNER|SYNCHRONIZE|0x3, ObjectAttributes=0x88:"Local\SM0:9668:304:WilStaging_02_p0") => 0xc0000034 [2 'The system cannot find the file specified.']
+NtCreateSemaphore(SemaphoreHandle=0x9b88bbd888 [0x94], DesiredAccess=DELETE|READ_CONTROL|WRITE_DAC|WRITE_OWNER|SYNCHRONIZE|0x3, ObjectAttributes=0x88:"Local\SM0:9668:304:WilStaging_02_p0", InitialCount=0x791eee98, MaxCount=0x791eee98) => 0
+NtCreateSemaphore(SemaphoreHandle=0x9b88bbd880 [0xa4], DesiredAccess=DELETE|READ_CONTROL|WRITE_DAC|WRITE_OWNER|SYNCHRONIZE|0x3, ObjectAttributes=0x88:"Local\SM0:9668:304:WilStaging_02_p0h", InitialCount=0x107, MaxCount=0x107) => 0
+NtReleaseMutant(MutantHandle=0x8c, PreviousCount=null) => 0
+NtQuerySystemInformation(SystemInformationClass=0 [SystemBasicInformation], SystemInformation=0x7ff9c14d70c0, Length=0x40, ReturnLength=null) => 0
+NtOpenKey(KeyHandle=0x9b88bbe5c8 [0xb4], DesiredAccess=KEY_READ, ObjectAttributes="\Registry\Machine\System\CurrentControlSet\Control\FileSystem\") => 0
+NtQueryValueKey(KeyHandle=0xb4, ValueName="LongPathsEnabled", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x9b88bbe600, Length=0x14, ResultLength=0x9b88bbe5c0 [0x10]) => 0
+NtQueryValueKey(KeyHandle=0xb4, ValueName="LPGO", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x9b88bbe600, Length=0x14, ResultLength=0x9b88bbe5c0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtClose(Handle=0xb4) => 0
+NtQueryAttributesFile(ObjectAttributes="\??\C:\WINDOWS\SYSTEM32\apphelp.dll", Attributes=0x9b88bbdfa0 [ARCHIVE]) => 0
+NtOpenFile(FileHandle=0x9b88bbdfe8 [0xb4], DesiredAccess=SYNCHRONIZE|0x21, ObjectAttributes="\??\C:\WINDOWS\SYSTEM32\apphelp.dll", IoStatusBlock=0x9b88bbe050 [0/1], ShareAccess=5, OpenOptions=0x60) => 0
+NtCreateSection(SectionHandle=0x9b88bbdff0 [0xb8], DesiredAccess=0xd, ObjectAttributes=null, SectionSize=null, Protect=0x10, Attributes=0x01000000, FileHandle=0xb4) => 0
+Loaded DLL at 00007FF9BE160000 C:\WINDOWS\SYSTEM32\apphelp.dll
+NtMapViewOfSection(SectionHandle=0xb8, ProcessHandle=-1, BaseAddress=0x20fe47b7b70 [0x00007ff9be160000], ZeroBits=0, CommitSize=0, SectionOffset=null, ViewSize=0x20fe47b7a98 [0x00106000], InheritDisposition=1 [ViewShare], AllocationType=0x00800000, Protect=0x80) => 0
+NtOpenKey(KeyHandle=0x9b88bbd938 [0xbc], DesiredAccess=0x1, ObjectAttributes="\Registry\Machine\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags") => 0
+NtQueryValueKey(KeyHandle=0xbc, ValueName="LogFlags", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x9b88bbd910, Length=0x14, ResultLength=0x9b88bbd900) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtClose(Handle=0xbc) => 0
+NtOpenKey(KeyHandle=0x9b88bbd938, DesiredAccess=0x1, ObjectAttributes="\Registry\Machine\OSDATA\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags") => 0xc0000034 [2 'The system cannot find the file specified.']
+NtOpenKey(KeyHandle=0x9b88bbdb98 [0xbc], DesiredAccess=0x1, ObjectAttributes="\Registry\Machine\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags") => 0
+NtQueryValueKey(KeyHandle=0xbc, ValueName="ShowDebugInfo", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x9b88bbdb70, Length=0x14, ResultLength=0x9b88bbdb60) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtClose(Handle=0xbc) => 0
+NtOpenFile(FileHandle=0x9b88bbdf18 [0xbc], DesiredAccess=READ_CONTROL, ObjectAttributes="\??\C:\Users\administrator\pb158\demo\waiting\wait_iocp.exe", IoStatusBlock=0x9b88bbdf90 [0/1], ShareAccess=5, OpenOptions=0) => 0
+NtQuerySecurityObject(Handle=0xbc, SecurityInformation=1 [OWNER_SECURITY_INFORMATION], SecurityDescriptor=null, SecurityDescriptorLength=0, ReturnLength=0x9b88bbdf28) => 0xc0000023 [122 'The data area passed to a system call is too small.']
+NtQuerySecurityObject(Handle=0xbc, SecurityInformation=1 [OWNER_SECURITY_INFORMATION], SecurityDescriptor=0x20fe47c1460, SecurityDescriptorLength=0x24, ReturnLength=0x9b88bbdf28 [0x24]) => 0
+NtClose(Handle=0xbc) => 0
+NtOpenFile(FileHandle=0x9b88bbdf18 [0xbc], DesiredAccess=READ_CONTROL, ObjectAttributes="\??\C:\WINDOWS\SYSTEM32\ntdll.dll", IoStatusBlock=0x9b88bbdf90 [0/1], ShareAccess=5, OpenOptions=0) => 0
+NtQuerySecurityObject(Handle=0xbc, SecurityInformation=1 [OWNER_SECURITY_INFORMATION], SecurityDescriptor=null, SecurityDescriptorLength=0, ReturnLength=0x9b88bbdf28) => 0xc0000023 [122 'The data area passed to a system call is too small.']
+NtQuerySecurityObject(Handle=0xbc, SecurityInformation=1 [OWNER_SECURITY_INFORMATION], SecurityDescriptor=0x20fe47c1860, SecurityDescriptorLength=0x34, ReturnLength=0x9b88bbdf28 [0x34]) => 0
+NtClose(Handle=0xbc) => 0
+NtOpenFile(FileHandle=0x9b88bbdf18 [0xbc], DesiredAccess=READ_CONTROL, ObjectAttributes="\??\C:\WINDOWS\System32\xtajit64se.dll", IoStatusBlock=0x9b88bbdf90 [0/1], ShareAccess=5, OpenOptions=0) => 0
+NtQuerySecurityObject(Handle=0xbc, SecurityInformation=1 [OWNER_SECURITY_INFORMATION], SecurityDescriptor=null, SecurityDescriptorLength=0, ReturnLength=0x9b88bbdf28) => 0xc0000023 [122 'The data area passed to a system call is too small.']
+NtQuerySecurityObject(Handle=0xbc, SecurityInformation=1 [OWNER_SECURITY_INFORMATION], SecurityDescriptor=0x20fe47c1860, SecurityDescriptorLength=0x34, ReturnLength=0x9b88bbdf28 [0x34]) => 0
+NtClose(Handle=0xbc) => 0
+NtOpenFile(FileHandle=0x9b88bbdf18 [0xbc], DesiredAccess=READ_CONTROL, ObjectAttributes="\??\C:\WINDOWS\System32\KERNEL32.DLL", IoStatusBlock=0x9b88bbdf90 [0/1], ShareAccess=5, OpenOptions=0) => 0
+NtQuerySecurityObject(Handle=0xbc, SecurityInformation=1 [OWNER_SECURITY_INFORMATION], SecurityDescriptor=null, SecurityDescriptorLength=0, ReturnLength=0x9b88bbdf28) => 0xc0000023 [122 'The data area passed to a system call is too small.']
+NtQuerySecurityObject(Handle=0xbc, SecurityInformation=1 [OWNER_SECURITY_INFORMATION], SecurityDescriptor=0x20fe47c1860, SecurityDescriptorLength=0x34, ReturnLength=0x9b88bbdf28 [0x34]) => 0
+NtClose(Handle=0xbc) => 0
+NtOpenFile(FileHandle=0x9b88bbdf18 [0xbc], DesiredAccess=READ_CONTROL, ObjectAttributes="\??\C:\WINDOWS\System32\KERNELBASE.dll", IoStatusBlock=0x9b88bbdf90 [0/1], ShareAccess=5, OpenOptions=0) => 0
+NtQuerySecurityObject(Handle=0xbc, SecurityInformation=1 [OWNER_SECURITY_INFORMATION], SecurityDescriptor=null, SecurityDescriptorLength=0, ReturnLength=0x9b88bbdf28) => 0xc0000023 [122 'The data area passed to a system call is too small.']
+NtQuerySecurityObject(Handle=0xbc, SecurityInformation=1 [OWNER_SECURITY_INFORMATION], SecurityDescriptor=0x20fe47c1860, SecurityDescriptorLength=0x34, ReturnLength=0x9b88bbdf28 [0x34]) => 0
+NtClose(Handle=0xbc) => 0
+NtOpenKey(KeyHandle=0x9b88bbd9f8 [0xd0], DesiredAccess=GENERIC_READ|0x100, ObjectAttributes="\Registry\Machine\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\SdbUpdates") => 0
+NtQueryValueKey(KeyHandle=0xd0, ValueName="StagedDelete_sysmain.sdb", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=null, Length=0, ResultLength=0x9b88bbda30) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtClose(Handle=0xd0) => 0
+NtOpenKey(KeyHandle=0x9b88bbd9f8 [0xd4], DesiredAccess=GENERIC_READ|0x100, ObjectAttributes="\Registry\Machine\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\SdbUpdates") => 0
+NtQueryValueKey(KeyHandle=0xd4, ValueName="sysmain.sdb", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=null, Length=0, ResultLength=0x9b88bbda30) => 0xc0000023 [122 'The data area passed to a system call is too small.']
+NtQueryValueKey(KeyHandle=0xd4, ValueName="sysmain.sdb", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x20fe47c2ba0, Length=0x48, ResultLength=0x9b88bbda30 [0x46]) => 0
+NtQueryValueKey(KeyHandle=0xd4, ValueName="MergeVer_sysmain.sdb", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x9b88bbd9d0, Length=0x14, ResultLength=0x9b88bbd9c0 [0x10]) => 0
+NtQueryValueKey(KeyHandle=0xd4, ValueName="MergeVer", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x9b88bbd9d0, Length=0x14, ResultLength=0x9b88bbd9c0 [0x10]) => 0
+NtQueryValueKey(KeyHandle=0xd4, ValueName="MinMergeVer", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x9b88bbd9d0, Length=0x14, ResultLength=0x9b88bbd9c0 [0x10]) => 0
+NtQueryInformationByName(ObjectAttributes="\??\C:\WINDOWS\AppPatch\01DD2B3C9708CF2D.sysmain.sdb", IoStatusBlock=0x9b88bbd950 [0/0x48], FileInformation=0x9b88bbd9d0, Length=0x48, FileInformationClass=0x44 [FileStatInformation]) => 0
+NtQueryInformationByName(ObjectAttributes="\??\C:\WINDOWS\AppPatch\sysmain.sdb", IoStatusBlock=0x9b88bbd950 [0/0x48], FileInformation=0x9b88bbd9d0, Length=0x48, FileInformationClass=0x44 [FileStatInformation]) => 0
+NtOpenKey(KeyHandle=0x9b88bbd908 [0xd0], DesiredAccess=GENERIC_READ|0x100, ObjectAttributes="\Registry\Machine\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\SdbUpdates") => 0
+NtQueryValueKey(KeyHandle=0xd0, ValueName="DisableDoubleQuerySdbs", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x9b88bbd8e0, Length=0x14, ResultLength=0x9b88bbd8d0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtClose(Handle=0xd0) => 0
+NtOpenKey(KeyHandle=0x9b88bbd958 [0xbc], DesiredAccess=GENERIC_READ|0x100, ObjectAttributes="\Registry\Machine\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\SdbUpdates\ManifestedMergeStubSdbs") => 0
+NtEnumerateValueKey(KeyHandle=0xbc, Index=0, KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x20fe47c2d30, Length=0x28, ResultLength=0x9b88bbd9f4 [0x24]) => 0
+NtEnumerateValueKey(KeyHandle=0xbc, Index=1, KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x20fe47c2d30, Length=0x28, ResultLength=0x9b88bbd9f4 [0x24]) => 0
+NtEnumerateValueKey(KeyHandle=0xbc, Index=1, KeyValueInformationClass=0 [KeyValueBasicInformation], KeyValueInformation=0x20fe47c2d90, Length=0x230, ResultLength=0x9b88bbd9f4 [0x74]) => 0
+NtClose(Handle=0xbc) => 0
+NtQueryInformationByName(ObjectAttributes="\??\C:\WINDOWS\apppatch\MergeSdbFilesSource\sysMerge.sdb", IoStatusBlock=0x9b88bbd950 [0/0x48], FileInformation=0x9b88bbd9d0, Length=0x48, FileInformationClass=0x44 [FileStatInformation]) => 0
+NtClose(Handle=0xd4) => 0
+NtCreateFile(FileHandle=0x9b88bbdae0 [0xbc], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\WINDOWS\AppPatch\01DD2B3C9708CF2D.sysmain.sdb", IoStatusBlock=0x9b88bbdaf0 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=5, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtQueryInformationFile(FileHandle=0xbc, IoStatusBlock=0x9b88bbdb80 [0/0x18], FileInformation=0x9b88bbdb90, Length=0x18, FileInformationClass=5 [FileStandardInformation]) => 0
+NtQueryInformationFile(FileHandle=0xbc, IoStatusBlock=0x9b88bbdb70 [0/0x18], FileInformation=0x9b88bbdb80, Length=0x18, FileInformationClass=5 [FileStandardInformation]) => 0
+NtCreateSection(SectionHandle=0x9b88bbdb20 [0xd4], DesiredAccess=DELETE|READ_CONTROL|WRITE_DAC|WRITE_OWNER|0x5, ObjectAttributes=null, SectionSize=null, Protect=2, Attributes=0x08000000, FileHandle=0xbc) => 0
+NtMapViewOfSection(SectionHandle=0xd4, ProcessHandle=-1, BaseAddress=0x9b88bbdb28 [0x00007ff319f30000], ZeroBits=0, CommitSize=0, SectionOffset=null, ViewSize=0x9b88bbdb30 [0x0040d000], InheritDisposition=2 [ViewUnmap], AllocationType=0x00500000, Protect=2) => 0
+NtOpenKey(KeyHandle=0x9b88bbdad8 [0xd0], DesiredAccess=GENERIC_READ|0x100, ObjectAttributes="\Registry\Machine\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\SdbUpdates") => 0
+NtQueryValueKey(KeyHandle=0xd0, ValueName="DisableDoubleQuerySdbs", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x9b88bbdab0, Length=0x14, ResultLength=0x9b88bbdaa0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtClose(Handle=0xd0) => 0
+NtOpenKey(KeyHandle=0x9b88bbdb28 [0xd0], DesiredAccess=GENERIC_READ|0x100, ObjectAttributes="\Registry\Machine\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\SdbUpdates\ManifestedMergeStubSdbs") => 0
+NtEnumerateValueKey(KeyHandle=0xd0, Index=0, KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x20fe47c2c20, Length=0x28, ResultLength=0x9b88bbdbc4 [0x24]) => 0
+NtEnumerateValueKey(KeyHandle=0xd0, Index=1, KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=0x20fe47c2c20, Length=0x28, ResultLength=0x9b88bbdbc4 [0x24]) => 0
+NtEnumerateValueKey(KeyHandle=0xd0, Index=1, KeyValueInformationClass=0 [KeyValueBasicInformation], KeyValueInformation=0x20fe47c2dd0, Length=0x230, ResultLength=0x9b88bbdbc4 [0x74]) => 0
+NtClose(Handle=0xd0) => 0
+NtOpenKey(KeyHandle=0x9b88bbda28 [0xd0], DesiredAccess=GENERIC_READ|0x100, ObjectAttributes="\Registry\Machine\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\SdbUpdates") => 0
+NtQueryValueKey(KeyHandle=0xd0, ValueName="StagedDelete_sysMerge.sdb", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=null, Length=0, ResultLength=0x9b88bbda60) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtClose(Handle=0xd0) => 0
+NtOpenKey(KeyHandle=0x9b88bbda28 [0xd0], DesiredAccess=GENERIC_READ|0x100, ObjectAttributes="\Registry\Machine\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\SdbUpdates") => 0
+NtQueryValueKey(KeyHandle=0xd0, ValueName="sysMerge.sdb", KeyValueInformationClass=2 [KeyValuePartialInformation], KeyValueInformation=null, Length=0, ResultLength=0x9b88bbda60) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtClose(Handle=0xd0) => 0
+NtOpenProcess(ProcessHandle=0x9b88bbd8b0 [0xd0], DesiredAccess=0x1000, ObjectAttributes=null, ClientId=0x9b88bbd8b8 [0x25c4/0]) => 0
+NtOpenProcessToken(ProcessHandle=0xd0, DesiredAccess=0x8, TokenHandle=0x9b88bbd880 [0xd8]) => 0
+NtQueryInformationToken(TokenHandle=0xd8, TokenInformationClass=0x27 [TokenSecurityAttributes], TokenInformation=null, Length=0, ReturnLength=0x9b88bbd7f0) => 0xc0000023 [122 'The data area passed to a system call is too small.']
+NtQueryInformationToken(TokenHandle=0xd8, TokenInformationClass=0x27 [TokenSecurityAttributes], TokenInformation=0x20fe47c2f00, Length=0xe8, ReturnLength=0x9b88bbd7f0 [0xe8]) => 0
+NtClose(Handle=0xd8) => 0
+NtCreateFile(FileHandle=0x9b88bbd6e0 [0xdc], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Users\administrator\pb158\demo\waiting\wait_iocp.exe", IoStatusBlock=0x9b88bbd670 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=1, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtOpenKey(KeyHandle=0x9b88bbd5d8 [0xe0], DesiredAccess=0x1, ObjectAttributes="\REGISTRY\USER\S-1-5-21-3636692760-3689470305-3850312049-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders") => 0
+NtQueryValueKey(KeyHandle=0xe0, ValueName="Cache", KeyValueInformationClass=1 [KeyValueFullInformation], KeyValueInformation=0x20fe47c3220, Length=0x208, ResultLength=0x9b88bbd5d0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtClose(Handle=0xe0) => 0
+NtApphelpCacheControl(ServiceClass=0, ServiceData="") => 0
+NtClose(Handle=0xdc) => 0
+NtCreateFile(FileHandle=0x9b88bbd518 [0xd8], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Users\administrator\pb158\demo\waiting\wait_iocp.exe", IoStatusBlock=0x9b88bbd480 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=1, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtOpenKey(KeyHandle=0x9b88bbd3e8 [0xdc], DesiredAccess=0x1, ObjectAttributes="\REGISTRY\USER\S-1-5-21-3636692760-3689470305-3850312049-500\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders") => 0
+NtQueryValueKey(KeyHandle=0xdc, ValueName="Cache", KeyValueInformationClass=1 [KeyValueFullInformation], KeyValueInformation=0x20fe47c3220, Length=0x208, ResultLength=0x9b88bbd3e0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtClose(Handle=0xdc) => 0
+NtApphelpCacheControl(ServiceClass=2, ServiceData="") => 0
+NtClose(Handle=0xd8) => 0
+NtClose(Handle=0xd0) => 0
+NtOpenMutant(MutantHandle=0x9b88bbdc98, DesiredAccess=SYNCHRONIZE, ObjectAttributes=0x88:"Local\ShimViewer") => 0xc0000034 [2 'The system cannot find the file specified.']
+NtClose(Handle=0xbc) => 0
+NtClose(Handle=0xd4) => 0
+NtUnmapViewOfSection(ProcessHandle=-1, BaseAddress=0x7ff319f30000) => 0
+Initial breakpoint
+NtTestAlert() => 0
+NtProtectVirtualMemory(ProcessHandle=-1, BaseAddress=0x9b88bbf708 [0x00007ff60f66a000], Size=0x9b88bbf700 [0x1000], NewProtect=2, OldProtect=0x9b88bbf810 [8]) => 0
+NtProtectVirtualMemory(ProcessHandle=-1, BaseAddress=0x9b88bbf688 [0x00007ff60f66a000], Size=0x9b88bbf680 [0x1000], NewProtect=4, OldProtect=0x9b88bbf7c0 [2]) => 0
+NtProtectVirtualMemory(ProcessHandle=-1, BaseAddress=0x9b88bbf688 [0x00007ff60f66a000], Size=0x9b88bbf680 [0x1000], NewProtect=2, OldProtect=0x9b88bbf7c0 [4]) => 0
+NtQueryVolumeInformationFile(FileHandle=0x2b4, IoStatusBlock=0x9b88bbf6e0 [0/8], FsInformation=0x9b88bbf6d0, Length=8, FsInformationClass=4 [FsDeviceInformation]) => 0
+NtQueryVolumeInformationFile(FileHandle=0xa04, IoStatusBlock=0x9b88bbf6e0 [0/8], FsInformation=0x9b88bbf6d0, Length=8, FsInformationClass=4 [FsDeviceInformation]) => 0
+NtQueryVolumeInformationFile(FileHandle=0x200, IoStatusBlock=0x9b88bbf6e0 [0/8], FsInformation=0x9b88bbf6d0, Length=8, FsInformationClass=4 [FsDeviceInformation]) => 0
+NtProtectVirtualMemory(ProcessHandle=-1, BaseAddress=0x9b88bbe8a8 [0x00007ff60f66a000], Size=0x9b88bbe8a0 [0x1000], NewProtect=4, OldProtect=0x9b88bbe9e0 [2]) => 0
+NtProtectVirtualMemory(ProcessHandle=-1, BaseAddress=0x9b88bbe8a8 [0x00007ff60f66a000], Size=0x9b88bbe8a0 [0x1000], NewProtect=2, OldProtect=0x9b88bbe9e0 [4]) => 0
+NtOpenKey(KeyHandle=0x9b88bbe530 [0xe8], DesiredAccess=KEY_READ, ObjectAttributes="\Registry\Machine\System\CurrentControlSet\Control\Nls\Sorting\Versions") => 0
+NtQueryValueKey(KeyHandle=0xe8, ValueName="", KeyValueInformationClass=1 [KeyValueFullInformation], KeyValueInformation=0x9b88bbe560, Length=0x214, ResultLength=0x9b88bbe790 [0x2a]) => 0
+NtQueryValueKey(KeyHandle=0xe8, ValueName="000605xx", KeyValueInformationClass=1 [KeyValueFullInformation], KeyValueInformation=0x9b88bbdf40, Length=0x214, ResultLength=0x9b88bbe180 [0x42]) => 0
+NtProtectVirtualMemory(ProcessHandle=-1, BaseAddress=0x9b88bbf3a8 [0x00007ff60f66a000], Size=0x9b88bbf3a0 [0x1000], NewProtect=4, OldProtect=0x9b88bbf4e0 [2]) => 0
+NtProtectVirtualMemory(ProcessHandle=-1, BaseAddress=0x9b88bbf3a8 [0x00007ff60f66a000], Size=0x9b88bbf3a0 [0x1000], NewProtect=2, OldProtect=0x9b88bbf4e0 [4]) => 0
+NtQueryVirtualMemory(ProcessHandle=-1, BaseAddress=0x7ff60f641e00, MemoryInformationClass=0 [MemoryBasicInformation], MemoryInformation=0x9b88bbf480, Length=0x30, ReturnLength=0x9b88bbf470 [0x30]) => 0
+NtQueryVirtualMemory(ProcessHandle=-1, BaseAddress=0x7ff60f641e00, MemoryInformationClass=3 [MemoryRegionInformation], MemoryInformation=0x9b88bbf4b0, Length=0x30, ReturnLength=null) => 0
+NtQueryVirtualMemory(ProcessHandle=-1, BaseAddress=0x7ff60f641e00, MemoryInformationClass=2 [MemoryMappedFilenameInformation], MemoryInformation=0x9b88bbf518, Length=0x21a, ReturnLength=null) => 0
+NtCreateIoCompletion(IoHandle=0x9b88bbf650 [0xec], DesiredAccess=DELETE|READ_CONTROL|WRITE_DAC|WRITE_OWNER|SYNCHRONIZE|0x3, ObjectAttributes=null, NumberOfConcurrentThreads=0) => 0
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0xf0], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-0", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0xf4], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-0", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0xf0, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0xf0, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0xf0, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8ba0, IoStatusBlock=0x20fe47c8ba0, Buffer=0x20fe47cbfd0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0xf8], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-1", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0xd0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-1", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0xf8, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0xf8, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0xf8, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8bc0, IoStatusBlock=0x20fe47c8bc0, Buffer=0x20fe47cc010, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0xfc], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-2", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x100], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-2", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0xfc, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0xfc, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0xfc, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8be0, IoStatusBlock=0x20fe47c8be0, Buffer=0x20fe47cc050, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x104], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-3", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x108], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-3", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x104, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x104, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x104, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8c00, IoStatusBlock=0x20fe47c8c00, Buffer=0x20fe47cc090, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x10c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-4", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x110], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-4", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x10c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x10c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x10c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8c20, IoStatusBlock=0x20fe47c8c20, Buffer=0x20fe47cc0d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x114], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-5", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x118], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-5", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x114, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x114, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x114, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8c40, IoStatusBlock=0x20fe47c8c40, Buffer=0x20fe47cc110, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x11c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-6", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x120], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-6", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x11c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x11c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x11c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8c60, IoStatusBlock=0x20fe47c8c60, Buffer=0x20fe47cc150, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x124], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-7", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x128], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-7", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x124, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x124, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x124, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8c80, IoStatusBlock=0x20fe47c8c80, Buffer=0x20fe47cc190, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x12c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-8", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x130], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-8", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x12c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x12c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x12c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8ca0, IoStatusBlock=0x20fe47c8ca0, Buffer=0x20fe47cc1d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x134], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-9", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x138], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-9", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x134, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x134, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x134, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8cc0, IoStatusBlock=0x20fe47c8cc0, Buffer=0x20fe47cc210, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x13c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-10", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x140], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-10", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x13c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x13c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x13c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8ce0, IoStatusBlock=0x20fe47c8ce0, Buffer=0x20fe47cc250, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x144], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-11", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x148], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-11", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x144, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x144, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x144, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8d00, IoStatusBlock=0x20fe47c8d00, Buffer=0x20fe47cc290, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x14c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-12", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x150], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-12", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x14c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x14c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x14c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8d20, IoStatusBlock=0x20fe47c8d20, Buffer=0x20fe47cc2d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x154], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-13", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x158], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-13", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x154, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x154, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x154, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8d40, IoStatusBlock=0x20fe47c8d40, Buffer=0x20fe47cc310, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x15c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-14", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x160], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-14", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x15c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x15c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x15c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8d60, IoStatusBlock=0x20fe47c8d60, Buffer=0x20fe47cc350, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x164], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-15", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x168], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-15", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x164, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x164, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x164, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8d80, IoStatusBlock=0x20fe47c8d80, Buffer=0x20fe47cc390, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x16c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-16", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x170], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-16", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x16c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x16c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x16c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8da0, IoStatusBlock=0x20fe47c8da0, Buffer=0x20fe47cc3d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x174], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-17", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x180], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-17", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x174, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x174, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x174, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8dc0, IoStatusBlock=0x20fe47c8dc0, Buffer=0x20fe47cc410, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x184], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-18", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x188], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-18", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x184, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x184, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x184, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8de0, IoStatusBlock=0x20fe47c8de0, Buffer=0x20fe47cc450, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x18c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-19", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x190], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-19", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x18c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x18c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x18c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8e00, IoStatusBlock=0x20fe47c8e00, Buffer=0x20fe47cc490, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x1a0], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-20", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x1a4], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-20", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x1a0, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x1a0, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x1a0, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8e20, IoStatusBlock=0x20fe47c8e20, Buffer=0x20fe47cc4d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x1ac], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-21", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x1b0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-21", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x1ac, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x1ac, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x1ac, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8e40, IoStatusBlock=0x20fe47c8e40, Buffer=0x20fe47cc510, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x1b4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-22", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x1c0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-22", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x1b4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x1b4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x1b4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8e60, IoStatusBlock=0x20fe47c8e60, Buffer=0x20fe47cc550, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x1c4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-23", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x1c8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-23", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x1c4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x1c4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x1c4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8e80, IoStatusBlock=0x20fe47c8e80, Buffer=0x20fe47cc590, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x1cc], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-24", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x1d0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-24", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x1cc, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x1cc, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x1cc, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8ea0, IoStatusBlock=0x20fe47c8ea0, Buffer=0x20fe47cc5d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x1d4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-25", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x1e8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-25", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x1d4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x1d4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x1d4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8ec0, IoStatusBlock=0x20fe47c8ec0, Buffer=0x20fe47cc610, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x1ec], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-26", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x1f0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-26", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x1ec, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x1ec, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x1ec, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8ee0, IoStatusBlock=0x20fe47c8ee0, Buffer=0x20fe47cc650, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x1f4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-27", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x1f8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-27", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x1f4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x1f4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x1f4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8f00, IoStatusBlock=0x20fe47c8f00, Buffer=0x20fe47cc690, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x1fc], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-28", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x208], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-28", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x1fc, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x1fc, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x1fc, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8f20, IoStatusBlock=0x20fe47c8f20, Buffer=0x20fe47cc6d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x20c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-29", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x210], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-29", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x20c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x20c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x20c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8f40, IoStatusBlock=0x20fe47c8f40, Buffer=0x20fe47cc710, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x214], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-30", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x21c], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-30", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x214, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x214, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x214, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8f60, IoStatusBlock=0x20fe47c8f60, Buffer=0x20fe47cc750, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x220], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-31", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x224], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-31", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x220, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x220, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x220, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8f80, IoStatusBlock=0x20fe47c8f80, Buffer=0x20fe47cc790, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x228], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-32", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x22c], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-32", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x228, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x228, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x228, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8fa0, IoStatusBlock=0x20fe47c8fa0, Buffer=0x20fe47cc7d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x230], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-33", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x234], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-33", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x230, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x230, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x230, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8fc0, IoStatusBlock=0x20fe47c8fc0, Buffer=0x20fe47cc810, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x238], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-34", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x23c], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-34", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x238, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x238, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x238, Event=0, ApcRoutine=null, ApcContext=0x20fe47c8fe0, IoStatusBlock=0x20fe47c8fe0, Buffer=0x20fe47cc850, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x240], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-35", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x248], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-35", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x240, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x240, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x240, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9000, IoStatusBlock=0x20fe47c9000, Buffer=0x20fe47cc890, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x24c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-36", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x250], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-36", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x24c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x24c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x24c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9020, IoStatusBlock=0x20fe47c9020, Buffer=0x20fe47cc8d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x254], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-37", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x25c], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-37", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x254, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x254, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x254, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9040, IoStatusBlock=0x20fe47c9040, Buffer=0x20fe47cc910, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x260], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-38", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x264], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-38", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x260, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x260, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x260, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9060, IoStatusBlock=0x20fe47c9060, Buffer=0x20fe47cc950, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x268], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-39", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x26c], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-39", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x268, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x268, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x268, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9080, IoStatusBlock=0x20fe47c9080, Buffer=0x20fe47cc990, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x270], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-40", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x274], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-40", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x270, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x270, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x270, Event=0, ApcRoutine=null, ApcContext=0x20fe47c90a0, IoStatusBlock=0x20fe47c90a0, Buffer=0x20fe47cc9d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x284], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-41", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x288], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-41", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x284, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x284, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x284, Event=0, ApcRoutine=null, ApcContext=0x20fe47c90c0, IoStatusBlock=0x20fe47c90c0, Buffer=0x20fe47cca10, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x28c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-42", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x290], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-42", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x28c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x28c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x28c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c90e0, IoStatusBlock=0x20fe47c90e0, Buffer=0x20fe47cca50, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x294], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-43", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x298], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-43", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x294, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x294, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x294, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9100, IoStatusBlock=0x20fe47c9100, Buffer=0x20fe47cca90, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x29c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-44", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x2a0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-44", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x29c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x29c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x29c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9120, IoStatusBlock=0x20fe47c9120, Buffer=0x20fe47ccad0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x2a4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-45", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x2a8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-45", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x2a4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x2a4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x2a4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9140, IoStatusBlock=0x20fe47c9140, Buffer=0x20fe47ccb10, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x2ac], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-46", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x2b8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-46", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x2ac, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x2ac, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x2ac, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9160, IoStatusBlock=0x20fe47c9160, Buffer=0x20fe47ccb50, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x2bc], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-47", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x2c0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-47", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x2bc, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x2bc, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x2bc, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9180, IoStatusBlock=0x20fe47c9180, Buffer=0x20fe47ccb90, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x2c4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-48", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x2c8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-48", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x2c4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x2c4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x2c4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c91a0, IoStatusBlock=0x20fe47c91a0, Buffer=0x20fe47ccbd0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x2cc], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-49", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x2d0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-49", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x2cc, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x2cc, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x2cc, Event=0, ApcRoutine=null, ApcContext=0x20fe47c91c0, IoStatusBlock=0x20fe47c91c0, Buffer=0x20fe47ccc10, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x2d4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-50", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x2d8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-50", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x2d4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x2d4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x2d4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c91e0, IoStatusBlock=0x20fe47c91e0, Buffer=0x20fe47ccc50, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x2dc], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-51", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x2e0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-51", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x2dc, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x2dc, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x2dc, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9200, IoStatusBlock=0x20fe47c9200, Buffer=0x20fe47ccc90, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x2e4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-52", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x2e8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-52", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x2e4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x2e4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x2e4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9220, IoStatusBlock=0x20fe47c9220, Buffer=0x20fe47cccd0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x2ec], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-53", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x2f0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-53", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x2ec, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x2ec, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x2ec, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9240, IoStatusBlock=0x20fe47c9240, Buffer=0x20fe47ccd10, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x2f4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-54", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x2f8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-54", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x2f4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x2f4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x2f4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9260, IoStatusBlock=0x20fe47c9260, Buffer=0x20fe47ccd50, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x2fc], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-55", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x300], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-55", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x2fc, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x2fc, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x2fc, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9280, IoStatusBlock=0x20fe47c9280, Buffer=0x20fe47ccd90, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x304], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-56", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x308], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-56", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x304, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x304, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x304, Event=0, ApcRoutine=null, ApcContext=0x20fe47c92a0, IoStatusBlock=0x20fe47c92a0, Buffer=0x20fe47ccdd0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x30c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-57", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x310], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-57", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x30c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x30c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x30c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c92c0, IoStatusBlock=0x20fe47c92c0, Buffer=0x20fe47cce10, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x314], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-58", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x318], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-58", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x314, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x314, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x314, Event=0, ApcRoutine=null, ApcContext=0x20fe47c92e0, IoStatusBlock=0x20fe47c92e0, Buffer=0x20fe47cce50, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x31c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-59", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x320], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-59", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x31c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x31c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x31c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9300, IoStatusBlock=0x20fe47c9300, Buffer=0x20fe47cce90, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x324], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-60", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x328], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-60", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x324, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x324, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x324, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9320, IoStatusBlock=0x20fe47c9320, Buffer=0x20fe47cced0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x32c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-61", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x330], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-61", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x32c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x32c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x32c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9340, IoStatusBlock=0x20fe47c9340, Buffer=0x20fe47ccf10, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x334], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-62", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x338], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-62", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x334, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x334, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x334, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9360, IoStatusBlock=0x20fe47c9360, Buffer=0x20fe47ccf50, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x33c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-63", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x340], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-63", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x33c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x33c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x33c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9380, IoStatusBlock=0x20fe47c9380, Buffer=0x20fe47ccf90, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x344], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-64", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x348], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-64", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x344, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x344, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x344, Event=0, ApcRoutine=null, ApcContext=0x20fe47c93a0, IoStatusBlock=0x20fe47c93a0, Buffer=0x20fe47ccfd0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x34c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-65", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x350], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-65", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x34c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x34c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x34c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c93c0, IoStatusBlock=0x20fe47c93c0, Buffer=0x20fe47cd010, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x354], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-66", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x358], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-66", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x354, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x354, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x354, Event=0, ApcRoutine=null, ApcContext=0x20fe47c93e0, IoStatusBlock=0x20fe47c93e0, Buffer=0x20fe47cd050, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x35c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-67", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x360], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-67", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x35c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x35c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x35c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9400, IoStatusBlock=0x20fe47c9400, Buffer=0x20fe47cd090, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x364], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-68", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x368], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-68", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x364, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x364, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x364, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9420, IoStatusBlock=0x20fe47c9420, Buffer=0x20fe47cd0d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x36c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-69", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x370], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-69", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x36c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x36c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x36c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9440, IoStatusBlock=0x20fe47c9440, Buffer=0x20fe47cd110, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x374], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-70", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x378], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-70", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x374, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x374, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x374, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9460, IoStatusBlock=0x20fe47c9460, Buffer=0x20fe47cd150, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x37c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-71", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x380], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-71", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x37c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x37c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x37c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9480, IoStatusBlock=0x20fe47c9480, Buffer=0x20fe47cd190, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x384], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-72", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x388], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-72", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x384, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x384, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x384, Event=0, ApcRoutine=null, ApcContext=0x20fe47c94a0, IoStatusBlock=0x20fe47c94a0, Buffer=0x20fe47cd1d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x38c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-73", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x390], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-73", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x38c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x38c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x38c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c94c0, IoStatusBlock=0x20fe47c94c0, Buffer=0x20fe47cd210, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x394], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-74", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x398], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-74", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x394, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x394, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x394, Event=0, ApcRoutine=null, ApcContext=0x20fe47c94e0, IoStatusBlock=0x20fe47c94e0, Buffer=0x20fe47cd250, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x39c], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-75", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x3a0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-75", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x39c, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x39c, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x39c, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9500, IoStatusBlock=0x20fe47c9500, Buffer=0x20fe47cd290, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x3a4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-76", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x3a8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-76", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x3a4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x3a4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x3a4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9520, IoStatusBlock=0x20fe47c9520, Buffer=0x20fe47cd2d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x3ac], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-77", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x3b0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-77", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x3ac, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x3ac, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x3ac, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9540, IoStatusBlock=0x20fe47c9540, Buffer=0x20fe47cd310, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x3b4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-78", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x3b8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-78", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x3b4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x3b4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x3b4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9560, IoStatusBlock=0x20fe47c9560, Buffer=0x20fe47cd350, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x3bc], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-79", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x3c0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-79", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x3bc, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x3bc, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x3bc, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9580, IoStatusBlock=0x20fe47c9580, Buffer=0x20fe47cd390, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x3c4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-80", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x3c8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-80", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x3c4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x3c4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x3c4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c95a0, IoStatusBlock=0x20fe47c95a0, Buffer=0x20fe47cd3d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x3cc], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-81", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x3d0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-81", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x3cc, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x3cc, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x3cc, Event=0, ApcRoutine=null, ApcContext=0x20fe47c95c0, IoStatusBlock=0x20fe47c95c0, Buffer=0x20fe47cd410, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x3d4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-82", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x3d8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-82", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x3d4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x3d4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x3d4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c95e0, IoStatusBlock=0x20fe47c95e0, Buffer=0x20fe47cd450, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x3dc], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-83", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x3e0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-83", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x3dc, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x3dc, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x3dc, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9600, IoStatusBlock=0x20fe47c9600, Buffer=0x20fe47cd490, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x3e4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-84", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x3e8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-84", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x3e4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x3e4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x3e4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9620, IoStatusBlock=0x20fe47c9620, Buffer=0x20fe47cd4d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x3ec], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-85", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x3f0], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-85", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x3ec, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x3ec, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x3ec, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9640, IoStatusBlock=0x20fe47c9640, Buffer=0x20fe47cd510, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x3f4], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-86", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x3f8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-86", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x3f4, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x3f4, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x3f4, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9660, IoStatusBlock=0x20fe47c9660, Buffer=0x20fe47cd550, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x3fc], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-87", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x404], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-87", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x3fc, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x3fc, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x3fc, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9680, IoStatusBlock=0x20fe47c9680, Buffer=0x20fe47cd590, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x408], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-88", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x40c], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-88", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x408, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x408, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x408, Event=0, ApcRoutine=null, ApcContext=0x20fe47c96a0, IoStatusBlock=0x20fe47c96a0, Buffer=0x20fe47cd5d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x410], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-89", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x414], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-89", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x410, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x410, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x410, Event=0, ApcRoutine=null, ApcContext=0x20fe47c96c0, IoStatusBlock=0x20fe47c96c0, Buffer=0x20fe47cd610, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x418], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-90", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x41c], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-90", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x418, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x418, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x418, Event=0, ApcRoutine=null, ApcContext=0x20fe47c96e0, IoStatusBlock=0x20fe47c96e0, Buffer=0x20fe47cd650, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x420], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-91", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x424], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-91", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x420, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x420, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x420, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9700, IoStatusBlock=0x20fe47c9700, Buffer=0x20fe47cd690, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x428], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-92", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x42c], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-92", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x428, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x428, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x428, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9720, IoStatusBlock=0x20fe47c9720, Buffer=0x20fe47cd6d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x430], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-93", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x434], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-93", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x430, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x430, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x430, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9740, IoStatusBlock=0x20fe47c9740, Buffer=0x20fe47cd710, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x438], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-94", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x43c], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-94", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x438, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x438, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x438, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9760, IoStatusBlock=0x20fe47c9760, Buffer=0x20fe47cd750, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x440], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-95", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x444], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-95", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x440, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x440, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x440, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9780, IoStatusBlock=0x20fe47c9780, Buffer=0x20fe47cd790, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x448], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-96", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x44c], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-96", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x448, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x448, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x448, Event=0, ApcRoutine=null, ApcContext=0x20fe47c97a0, IoStatusBlock=0x20fe47c97a0, Buffer=0x20fe47cd7d0, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x450], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-97", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x454], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-97", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x450, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x450, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x450, Event=0, ApcRoutine=null, ApcContext=0x20fe47c97c0, IoStatusBlock=0x20fe47c97c0, Buffer=0x20fe47cd810, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x458], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-98", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x45c], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-98", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x458, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x458, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x458, Event=0, ApcRoutine=null, ApcContext=0x20fe47c97e0, IoStatusBlock=0x20fe47c97e0, Buffer=0x20fe47cd850, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtCreateNamedPipeFile(NamedPipeHandle=0x9b88bbf560 [0x460], DesiredAccess=SYNCHRONIZE|GENERIC_READ, ObjectAttributes="\??\pipe\pb158-iocp-c-99", IoStatusBlock=0x9b88bbf5c0 [0/2], ShareAccess=2, CreateDisposition=3, CreateOptions=0, MessageType=false, MessageRead=false, NonBlocking=false, MaxInstances=1, InBufferSize=0x1000, OutBufferSize=0x1000, Timeout=0x9b88bbf570 [-500000]) => 0
+NtCreateFile(FileHandle=0x9b88bbf4b8 [0x464], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes="\??\pipe\pb158-iocp-c-99", IoStatusBlock=0x9b88bbf4f0 [0/1], AllocationSize=null, FileAttributes=0, ShareAccess=0, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtFsControlFile(FileHandle=0x460, Event=0, UserApcRoutine=null, UserApcContext=null, UserIoStatus=0x9b88bbf670, FsControlCode=0x00110008, InputBuffer=null, InputBufferLength=0, OutputBuffer=null, OutputBufferLength=0) => 0xc00000b2 [535 'There is a process on other end of the pipe.']
+NtSetInformationFile(FileHandle=0x460, IoStatusBlock=0x9b88bbf670 [0/0], FileInformation=0x9b88bbf658, Length=0x10, FileInformationClass=0x1e [FileCompletionInformation]) => 0
+NtReadFile(FileHandle=0x460, Event=0, ApcRoutine=null, ApcContext=0x20fe47c9800, IoStatusBlock=0x20fe47c9800, Buffer=0x20fe47cd890, Length=0x40, ByteOffset=0x9b88bbf660 [0], Key=null) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtRemoveIoCompletion(IoHandle=0xec, Key=0x9b88bbf7a0 [0], Overlapped=0x9b88bbf678, IoStatusBlock=0x9b88bbf680 [0/0], Timeout=0x9b88bbf670 [-2e+07]) => 0x102 [1460 'This operation returned because the timeout period expired.']
+NtCancelIoFileEx(hFile=0xf0, IoStatusBlockIn=0x20fe47c8ba0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0xf0) => 0
+NtClose(Handle=0xf4) => 0
+NtCancelIoFileEx(hFile=0xf8, IoStatusBlockIn=0x20fe47c8bc0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0xf8) => 0
+NtClose(Handle=0xd0) => 0
+NtCancelIoFileEx(hFile=0xfc, IoStatusBlockIn=0x20fe47c8be0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0xfc) => 0
+NtClose(Handle=0x100) => 0
+NtCancelIoFileEx(hFile=0x104, IoStatusBlockIn=0x20fe47c8c00 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x104) => 0
+NtClose(Handle=0x108) => 0
+NtCancelIoFileEx(hFile=0x10c, IoStatusBlockIn=0x20fe47c8c20 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x10c) => 0
+NtClose(Handle=0x110) => 0
+NtCancelIoFileEx(hFile=0x114, IoStatusBlockIn=0x20fe47c8c40 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x114) => 0
+NtClose(Handle=0x118) => 0
+NtCancelIoFileEx(hFile=0x11c, IoStatusBlockIn=0x20fe47c8c60 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x11c) => 0
+NtClose(Handle=0x120) => 0
+NtCancelIoFileEx(hFile=0x124, IoStatusBlockIn=0x20fe47c8c80 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x124) => 0
+NtClose(Handle=0x128) => 0
+NtCancelIoFileEx(hFile=0x12c, IoStatusBlockIn=0x20fe47c8ca0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x12c) => 0
+NtClose(Handle=0x130) => 0
+NtCancelIoFileEx(hFile=0x134, IoStatusBlockIn=0x20fe47c8cc0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x134) => 0
+NtClose(Handle=0x138) => 0
+NtCancelIoFileEx(hFile=0x13c, IoStatusBlockIn=0x20fe47c8ce0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x13c) => 0
+NtClose(Handle=0x140) => 0
+NtCancelIoFileEx(hFile=0x144, IoStatusBlockIn=0x20fe47c8d00 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x144) => 0
+NtClose(Handle=0x148) => 0
+NtCancelIoFileEx(hFile=0x14c, IoStatusBlockIn=0x20fe47c8d20 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x14c) => 0
+NtClose(Handle=0x150) => 0
+NtCancelIoFileEx(hFile=0x154, IoStatusBlockIn=0x20fe47c8d40 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x154) => 0
+NtClose(Handle=0x158) => 0
+NtCancelIoFileEx(hFile=0x15c, IoStatusBlockIn=0x20fe47c8d60 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x15c) => 0
+NtClose(Handle=0x160) => 0
+NtCancelIoFileEx(hFile=0x164, IoStatusBlockIn=0x20fe47c8d80 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x164) => 0
+NtClose(Handle=0x168) => 0
+NtCancelIoFileEx(hFile=0x16c, IoStatusBlockIn=0x20fe47c8da0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x16c) => 0
+NtClose(Handle=0x170) => 0
+NtCancelIoFileEx(hFile=0x174, IoStatusBlockIn=0x20fe47c8dc0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x174) => 0
+NtClose(Handle=0x180) => 0
+NtCancelIoFileEx(hFile=0x184, IoStatusBlockIn=0x20fe47c8de0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x184) => 0
+NtClose(Handle=0x188) => 0
+NtCancelIoFileEx(hFile=0x18c, IoStatusBlockIn=0x20fe47c8e00 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x18c) => 0
+NtClose(Handle=0x190) => 0
+NtCancelIoFileEx(hFile=0x1a0, IoStatusBlockIn=0x20fe47c8e20 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x1a0) => 0
+NtClose(Handle=0x1a4) => 0
+NtCancelIoFileEx(hFile=0x1ac, IoStatusBlockIn=0x20fe47c8e40 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x1ac) => 0
+NtClose(Handle=0x1b0) => 0
+NtCancelIoFileEx(hFile=0x1b4, IoStatusBlockIn=0x20fe47c8e60 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x1b4) => 0
+NtClose(Handle=0x1c0) => 0
+NtCancelIoFileEx(hFile=0x1c4, IoStatusBlockIn=0x20fe47c8e80 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x1c4) => 0
+NtClose(Handle=0x1c8) => 0
+NtCancelIoFileEx(hFile=0x1cc, IoStatusBlockIn=0x20fe47c8ea0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x1cc) => 0
+NtClose(Handle=0x1d0) => 0
+NtCancelIoFileEx(hFile=0x1d4, IoStatusBlockIn=0x20fe47c8ec0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x1d4) => 0
+NtClose(Handle=0x1e8) => 0
+NtCancelIoFileEx(hFile=0x1ec, IoStatusBlockIn=0x20fe47c8ee0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x1ec) => 0
+NtClose(Handle=0x1f0) => 0
+NtCancelIoFileEx(hFile=0x1f4, IoStatusBlockIn=0x20fe47c8f00 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x1f4) => 0
+NtClose(Handle=0x1f8) => 0
+NtCancelIoFileEx(hFile=0x1fc, IoStatusBlockIn=0x20fe47c8f20 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x1fc) => 0
+NtClose(Handle=0x208) => 0
+NtCancelIoFileEx(hFile=0x20c, IoStatusBlockIn=0x20fe47c8f40 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x20c) => 0
+NtClose(Handle=0x210) => 0
+NtCancelIoFileEx(hFile=0x214, IoStatusBlockIn=0x20fe47c8f60 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x214) => 0
+NtClose(Handle=0x21c) => 0
+NtCancelIoFileEx(hFile=0x220, IoStatusBlockIn=0x20fe47c8f80 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x220) => 0
+NtClose(Handle=0x224) => 0
+NtCancelIoFileEx(hFile=0x228, IoStatusBlockIn=0x20fe47c8fa0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x228) => 0
+NtClose(Handle=0x22c) => 0
+NtCancelIoFileEx(hFile=0x230, IoStatusBlockIn=0x20fe47c8fc0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x230) => 0
+NtClose(Handle=0x234) => 0
+NtCancelIoFileEx(hFile=0x238, IoStatusBlockIn=0x20fe47c8fe0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x238) => 0
+NtClose(Handle=0x23c) => 0
+NtCancelIoFileEx(hFile=0x240, IoStatusBlockIn=0x20fe47c9000 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x240) => 0
+NtClose(Handle=0x248) => 0
+NtCancelIoFileEx(hFile=0x24c, IoStatusBlockIn=0x20fe47c9020 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x24c) => 0
+NtClose(Handle=0x250) => 0
+NtCancelIoFileEx(hFile=0x254, IoStatusBlockIn=0x20fe47c9040 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x254) => 0
+NtClose(Handle=0x25c) => 0
+NtCancelIoFileEx(hFile=0x260, IoStatusBlockIn=0x20fe47c9060 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x260) => 0
+NtClose(Handle=0x264) => 0
+NtCancelIoFileEx(hFile=0x268, IoStatusBlockIn=0x20fe47c9080 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x268) => 0
+NtClose(Handle=0x26c) => 0
+NtCancelIoFileEx(hFile=0x270, IoStatusBlockIn=0x20fe47c90a0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x270) => 0
+NtClose(Handle=0x274) => 0
+NtCancelIoFileEx(hFile=0x284, IoStatusBlockIn=0x20fe47c90c0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x284) => 0
+NtClose(Handle=0x288) => 0
+NtCancelIoFileEx(hFile=0x28c, IoStatusBlockIn=0x20fe47c90e0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x28c) => 0
+NtClose(Handle=0x290) => 0
+NtCancelIoFileEx(hFile=0x294, IoStatusBlockIn=0x20fe47c9100 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x294) => 0
+NtClose(Handle=0x298) => 0
+NtCancelIoFileEx(hFile=0x29c, IoStatusBlockIn=0x20fe47c9120 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x29c) => 0
+NtClose(Handle=0x2a0) => 0
+NtCancelIoFileEx(hFile=0x2a4, IoStatusBlockIn=0x20fe47c9140 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x2a4) => 0
+NtClose(Handle=0x2a8) => 0
+NtCancelIoFileEx(hFile=0x2ac, IoStatusBlockIn=0x20fe47c9160 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x2ac) => 0
+NtClose(Handle=0x2b8) => 0
+NtCancelIoFileEx(hFile=0x2bc, IoStatusBlockIn=0x20fe47c9180 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x2bc) => 0
+NtClose(Handle=0x2c0) => 0
+NtCancelIoFileEx(hFile=0x2c4, IoStatusBlockIn=0x20fe47c91a0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x2c4) => 0
+NtClose(Handle=0x2c8) => 0
+NtCancelIoFileEx(hFile=0x2cc, IoStatusBlockIn=0x20fe47c91c0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x2cc) => 0
+NtClose(Handle=0x2d0) => 0
+NtCancelIoFileEx(hFile=0x2d4, IoStatusBlockIn=0x20fe47c91e0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x2d4) => 0
+NtClose(Handle=0x2d8) => 0
+NtCancelIoFileEx(hFile=0x2dc, IoStatusBlockIn=0x20fe47c9200 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x2dc) => 0
+NtClose(Handle=0x2e0) => 0
+NtCancelIoFileEx(hFile=0x2e4, IoStatusBlockIn=0x20fe47c9220 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x2e4) => 0
+NtClose(Handle=0x2e8) => 0
+NtCancelIoFileEx(hFile=0x2ec, IoStatusBlockIn=0x20fe47c9240 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x2ec) => 0
+NtClose(Handle=0x2f0) => 0
+NtCancelIoFileEx(hFile=0x2f4, IoStatusBlockIn=0x20fe47c9260 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x2f4) => 0
+NtClose(Handle=0x2f8) => 0
+NtCancelIoFileEx(hFile=0x2fc, IoStatusBlockIn=0x20fe47c9280 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x2fc) => 0
+NtClose(Handle=0x300) => 0
+NtCancelIoFileEx(hFile=0x304, IoStatusBlockIn=0x20fe47c92a0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x304) => 0
+NtClose(Handle=0x308) => 0
+NtCancelIoFileEx(hFile=0x30c, IoStatusBlockIn=0x20fe47c92c0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x30c) => 0
+NtClose(Handle=0x310) => 0
+NtCancelIoFileEx(hFile=0x314, IoStatusBlockIn=0x20fe47c92e0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x314) => 0
+NtClose(Handle=0x318) => 0
+NtCancelIoFileEx(hFile=0x31c, IoStatusBlockIn=0x20fe47c9300 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x31c) => 0
+NtClose(Handle=0x320) => 0
+NtCancelIoFileEx(hFile=0x324, IoStatusBlockIn=0x20fe47c9320 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x324) => 0
+NtClose(Handle=0x328) => 0
+NtCancelIoFileEx(hFile=0x32c, IoStatusBlockIn=0x20fe47c9340 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x32c) => 0
+NtClose(Handle=0x330) => 0
+NtCancelIoFileEx(hFile=0x334, IoStatusBlockIn=0x20fe47c9360 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x334) => 0
+NtClose(Handle=0x338) => 0
+NtCancelIoFileEx(hFile=0x33c, IoStatusBlockIn=0x20fe47c9380 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x33c) => 0
+NtClose(Handle=0x340) => 0
+NtCancelIoFileEx(hFile=0x344, IoStatusBlockIn=0x20fe47c93a0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x344) => 0
+NtClose(Handle=0x348) => 0
+NtCancelIoFileEx(hFile=0x34c, IoStatusBlockIn=0x20fe47c93c0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x34c) => 0
+NtClose(Handle=0x350) => 0
+NtCancelIoFileEx(hFile=0x354, IoStatusBlockIn=0x20fe47c93e0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x354) => 0
+NtClose(Handle=0x358) => 0
+NtCancelIoFileEx(hFile=0x35c, IoStatusBlockIn=0x20fe47c9400 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x35c) => 0
+NtClose(Handle=0x360) => 0
+NtCancelIoFileEx(hFile=0x364, IoStatusBlockIn=0x20fe47c9420 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x364) => 0
+NtClose(Handle=0x368) => 0
+NtCancelIoFileEx(hFile=0x36c, IoStatusBlockIn=0x20fe47c9440 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x36c) => 0
+NtClose(Handle=0x370) => 0
+NtCancelIoFileEx(hFile=0x374, IoStatusBlockIn=0x20fe47c9460 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x374) => 0
+NtClose(Handle=0x378) => 0
+NtCancelIoFileEx(hFile=0x37c, IoStatusBlockIn=0x20fe47c9480 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x37c) => 0
+NtClose(Handle=0x380) => 0
+NtCancelIoFileEx(hFile=0x384, IoStatusBlockIn=0x20fe47c94a0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x384) => 0
+NtClose(Handle=0x388) => 0
+NtCancelIoFileEx(hFile=0x38c, IoStatusBlockIn=0x20fe47c94c0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x38c) => 0
+NtClose(Handle=0x390) => 0
+NtCancelIoFileEx(hFile=0x394, IoStatusBlockIn=0x20fe47c94e0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x394) => 0
+NtClose(Handle=0x398) => 0
+NtCancelIoFileEx(hFile=0x39c, IoStatusBlockIn=0x20fe47c9500 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x39c) => 0
+NtClose(Handle=0x3a0) => 0
+NtCancelIoFileEx(hFile=0x3a4, IoStatusBlockIn=0x20fe47c9520 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x3a4) => 0
+NtClose(Handle=0x3a8) => 0
+NtCancelIoFileEx(hFile=0x3ac, IoStatusBlockIn=0x20fe47c9540 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x3ac) => 0
+NtClose(Handle=0x3b0) => 0
+NtCancelIoFileEx(hFile=0x3b4, IoStatusBlockIn=0x20fe47c9560 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x3b4) => 0
+NtClose(Handle=0x3b8) => 0
+NtCancelIoFileEx(hFile=0x3bc, IoStatusBlockIn=0x20fe47c9580 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x3bc) => 0
+NtClose(Handle=0x3c0) => 0
+NtCancelIoFileEx(hFile=0x3c4, IoStatusBlockIn=0x20fe47c95a0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x3c4) => 0
+NtClose(Handle=0x3c8) => 0
+NtCancelIoFileEx(hFile=0x3cc, IoStatusBlockIn=0x20fe47c95c0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x3cc) => 0
+NtClose(Handle=0x3d0) => 0
+NtCancelIoFileEx(hFile=0x3d4, IoStatusBlockIn=0x20fe47c95e0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x3d4) => 0
+NtClose(Handle=0x3d8) => 0
+NtCancelIoFileEx(hFile=0x3dc, IoStatusBlockIn=0x20fe47c9600 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x3dc) => 0
+NtClose(Handle=0x3e0) => 0
+NtCancelIoFileEx(hFile=0x3e4, IoStatusBlockIn=0x20fe47c9620 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x3e4) => 0
+NtClose(Handle=0x3e8) => 0
+NtCancelIoFileEx(hFile=0x3ec, IoStatusBlockIn=0x20fe47c9640 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x3ec) => 0
+NtClose(Handle=0x3f0) => 0
+NtCancelIoFileEx(hFile=0x3f4, IoStatusBlockIn=0x20fe47c9660 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x3f4) => 0
+NtClose(Handle=0x3f8) => 0
+NtCancelIoFileEx(hFile=0x3fc, IoStatusBlockIn=0x20fe47c9680 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x3fc) => 0
+NtClose(Handle=0x404) => 0
+NtCancelIoFileEx(hFile=0x408, IoStatusBlockIn=0x20fe47c96a0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x408) => 0
+NtClose(Handle=0x40c) => 0
+NtCancelIoFileEx(hFile=0x410, IoStatusBlockIn=0x20fe47c96c0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x410) => 0
+NtClose(Handle=0x414) => 0
+NtCancelIoFileEx(hFile=0x418, IoStatusBlockIn=0x20fe47c96e0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x418) => 0
+NtClose(Handle=0x41c) => 0
+NtCancelIoFileEx(hFile=0x420, IoStatusBlockIn=0x20fe47c9700 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x420) => 0
+NtClose(Handle=0x424) => 0
+NtCancelIoFileEx(hFile=0x428, IoStatusBlockIn=0x20fe47c9720 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x428) => 0
+NtClose(Handle=0x42c) => 0
+NtCancelIoFileEx(hFile=0x430, IoStatusBlockIn=0x20fe47c9740 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x430) => 0
+NtClose(Handle=0x434) => 0
+NtCancelIoFileEx(hFile=0x438, IoStatusBlockIn=0x20fe47c9760 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x438) => 0
+NtClose(Handle=0x43c) => 0
+NtCancelIoFileEx(hFile=0x440, IoStatusBlockIn=0x20fe47c9780 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x440) => 0
+NtClose(Handle=0x444) => 0
+NtCancelIoFileEx(hFile=0x448, IoStatusBlockIn=0x20fe47c97a0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x448) => 0
+NtClose(Handle=0x44c) => 0
+NtCancelIoFileEx(hFile=0x450, IoStatusBlockIn=0x20fe47c97c0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x450) => 0
+NtClose(Handle=0x454) => 0
+NtCancelIoFileEx(hFile=0x458, IoStatusBlockIn=0x20fe47c97e0 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x458) => 0
+NtClose(Handle=0x45c) => 0
+NtCancelIoFileEx(hFile=0x460, IoStatusBlockIn=0x20fe47c9800 [0x103/0], IoStatusBlock=0x9b88bbf690 [0/0]) => 0
+NtClose(Handle=0x460) => 0
+NtClose(Handle=0x464) => 0
+NtClose(Handle=0xec) => 0
+done: 100 pipes, one GetQueuedCompletionStatus slept 2.00s, 0 completions, 0 bytes
+NtWriteFile(FileHandle=0xa04, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x9b88bbdf40 [0/0x54], Buffer=0x9b88bbe060, Length=0x54, ByteOffset=null, Key=null) => 0
+NtQueryAttributesFile(ObjectAttributes="\??\C:\WINDOWS\SYSTEM32\kernel.appcore.dll", Attributes=0x9b88bbf110 [ARCHIVE]) => 0
+NtOpenFile(FileHandle=0x9b88bbf158 [0x460], DesiredAccess=SYNCHRONIZE|0x21, ObjectAttributes="\??\C:\WINDOWS\SYSTEM32\kernel.appcore.dll", IoStatusBlock=0x9b88bbf1c0 [0/1], ShareAccess=5, OpenOptions=0x60) => 0
+NtCreateSection(SectionHandle=0x9b88bbf160 [0xec], DesiredAccess=0xd, ObjectAttributes=null, SectionSize=null, Protect=0x10, Attributes=0x01000000, FileHandle=0x460) => 0
+Loaded DLL at 00007FF9BC190000 C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+NtMapViewOfSection(SectionHandle=0xec, ProcessHandle=-1, BaseAddress=0x20fe47cdc90 [0x00007ff9bc190000], ZeroBits=0, CommitSize=0, SectionOffset=null, ViewSize=0x20fe47cdba8 [0x00031000], InheritDisposition=1 [ViewShare], AllocationType=0x00800000, Protect=0x80) => 0
+Loaded DLL at 00007FF9C18D0000 C:\WINDOWS\System32\msvcrt.dll
+NtMapViewOfSection(SectionHandle=0x45c, ProcessHandle=-1, BaseAddress=0x20fe47c7250 [0x00007ff9c18d0000], ZeroBits=0, CommitSize=0, SectionOffset=null, ViewSize=0x20fe47c71a8 [0x00148000], InheritDisposition=1 [ViewShare], AllocationType=0x00800000, Protect=0x80) => 0
+NtQueryVolumeInformationFile(FileHandle=0x2b4, IoStatusBlock=0x9b88bbeeb0 [0/8], FsInformation=0x9b88bbeea0, Length=8, FsInformationClass=4 [FsDeviceInformation]) => 0
+NtQueryVolumeInformationFile(FileHandle=0xa04, IoStatusBlock=0x9b88bbeeb0 [0/8], FsInformation=0x9b88bbeea0, Length=8, FsInformationClass=4 [FsDeviceInformation]) => 0
+NtQueryVolumeInformationFile(FileHandle=0x200, IoStatusBlock=0x9b88bbeeb0 [0/8], FsInformation=0x9b88bbeea0, Length=8, FsInformationClass=4 [FsDeviceInformation]) => 0
+NtProtectVirtualMemory(ProcessHandle=-1, BaseAddress=0x9b88bbf688 [0x00007ff60f66a000], Size=0x9b88bbf680 [0x1000], NewProtect=4, OldProtect=0x9b88bbf7c0 [2]) => 0
+NtProtectVirtualMemory(ProcessHandle=-1, BaseAddress=0x9b88bbf688 [0x00007ff60f66a000], Size=0x9b88bbf680 [0x1000], NewProtect=2, OldProtect=0x9b88bbf7c0 [4]) => 0
+NtQueryWnfStateData(StateName=0x9b88bbf110 [0xa3bc1c75], TypeId=null, ExplicitScope=null, ChangeStamp=0x9b88bbe064 [0x5771], Buffer=0x9b88bbe0b8, BufferSize=0x9b88bbe060 [0xffe]) => 0
+Process 9668 exit code: 0

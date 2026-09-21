@@ -1,0 +1,80 @@
+Process 3544 starting at 00007FF6B95412A0 with command line: ""C:\Program Files\Python314\python.exe" dest_win32.py"
+C:\Program Files\Python314\python.exe
+Loaded DLL at 00007FF9C3290000 ntdll.dll
+Loaded DLL at 00007FF9C1D20000 C:\WINDOWS\System32\xtajit64se.dll
+Loaded DLL at 00007FF9C1380000 C:\WINDOWS\System32\KERNEL32.DLL
+Loaded DLL at 00007FF9BE5D0000 C:\WINDOWS\System32\KERNELBASE.dll
+NtDeviceIoControlFile(FileHandle=0x8c, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40de320 [0/0], IoControlCode=0x00500023, InputBuffer=null, InputBufferLength=0, OutputBuffer=0x34b40de310, OutputBufferLength=8) => 0
+NtDeviceIoControlFile(FileHandle=0x8c, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40de1c0, IoControlCode=0x00500016, InputBuffer=0x34b40de1d0, InputBufferLength=0x30, OutputBuffer=null, OutputBufferLength=0) => 0xc00700bb [187 'The specified system semaphore name was not found.']
+Loaded DLL at 00007FF9BE160000 C:\WINDOWS\SYSTEM32\apphelp.dll
+Loaded DLL at 00007FF9BEE00000 C:\WINDOWS\System32\ucrtbase.dll
+Loaded DLL at 00007FF915490000 C:\Program Files\Python314\python314.dll
+Loaded DLL at 00007FF9C0F80000 C:\WINDOWS\System32\WS2_32.dll
+Loaded DLL at 00007FF9C1A20000 C:\WINDOWS\System32\RPCRT4.dll
+Loaded DLL at 00007FF9C0120000 C:\WINDOWS\System32\ADVAPI32.dll
+Loaded DLL at 00007FF9C18D0000 C:\WINDOWS\System32\msvcrt.dll
+Loaded DLL at 00007FF9C1510000 C:\WINDOWS\System32\sechost.dll
+Loaded DLL at 00007FF9B1B10000 C:\Program Files\Python314\VCRUNTIME140.dll
+Loaded DLL at 00007FF99FE40000 C:\WINDOWS\SYSTEM32\VERSION.dll
+Loaded DLL at 00007FF9BE440000 C:\WINDOWS\SYSTEM32\bcrypt.dll
+Initial breakpoint
+NtDeviceIoControlFile(FileHandle=0x134, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40de8c0 [0/0], IoControlCode=0x00390400, InputBuffer=0x34b40de980, InputBufferLength=0x68, OutputBuffer=0x34b40de8d0, OutputBufferLength=8) => 0
+NtDeviceIoControlFile(FileHandle=0x134, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40df400 [0/0xd8], IoControlCode=0x00390400, InputBuffer=0x34b40df508, InputBufferLength=0x30, OutputBuffer=0x1bcac0bbc00, OutputBufferLength=0x180) => 0
+NtDeviceIoControlFile(FileHandle=0x134, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40dee10 [0/0xd8], IoControlCode=0x00390400, InputBuffer=0x34b40def28, InputBufferLength=0x38, OutputBuffer=0x1bcac0bbdb0, OutputBufferLength=0x180) => 0
+Loaded DLL at 00007FF9BF190000 C:\WINDOWS\System32\bcryptprimitives.dll
+NtDeviceIoControlFile(FileHandle=0x154, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40de890 [0/0x30], IoControlCode=0x00390008, InputBuffer=null, InputBufferLength=0, OutputBuffer=0x34b40de970, OutputBufferLength=0x30) => 0
+NtDeviceIoControlFile(FileHandle=0x160, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40dea70 [0/0xc], IoControlCode=0x006d0030, InputBuffer=0x1bcac16d730, InputBufferLength=0x32, OutputBuffer=0x1bcac16e108, OutputBufferLength=0x210) => 0
+NtDeviceIoControlFile(FileHandle=0x8c, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40df110, IoControlCode=0x00500016, InputBuffer=0x34b40df120, InputBufferLength=0x30, OutputBuffer=null, OutputBufferLength=0) => 0xc0000008 [6 'The handle is invalid.']
+NtDeviceIoControlFile(FileHandle=0x8c, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40df110, IoControlCode=0x00500016, InputBuffer=0x34b40df120, InputBufferLength=0x30, OutputBuffer=null, OutputBufferLength=0) => 0xc0000008 [6 'The handle is invalid.']
+NtDeviceIoControlFile(FileHandle=0x8c, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40df110, IoControlCode=0x00500016, InputBuffer=0x34b40df120, InputBufferLength=0x30, OutputBuffer=null, OutputBufferLength=0) => 0xc0000008 [6 'The handle is invalid.']
+Loaded DLL at 000001BCB5120000 C:\Program Files\Python314\python3.DLL
+Loaded DLL at 00007FF9B5BA0000 C:\Program Files\Python314\DLLs\_socket.pyd
+Loaded DLL at 00007FF9BB340000 C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+Loaded DLL at 00007FF9B1350000 C:\Program Files\Python314\Lib\site-packages\win32\_win32sysloader.pyd
+Loaded DLL at 00007FF9A29C0000 C:\Program Files\Python314\Lib\site-packages\pywin32_system32\pywintypes314.dll
+Loaded DLL at 00007FF9C0CF0000 C:\WINDOWS\System32\USER32.dll
+Loaded DLL at 00007FF9BF2A0000 C:\WINDOWS\System32\win32u.dll
+Loaded DLL at 00007FF9C05D0000 C:\WINDOWS\System32\GDI32.dll
+Loaded DLL at 00007FF9BF310000 C:\WINDOWS\System32\gdi32full.dll
+Loaded DLL at 00007FF9BF030000 C:\WINDOWS\System32\msvcp_win.dll
+Loaded DLL at 00007FF9BF680000 C:\WINDOWS\System32\ole32.dll
+Loaded DLL at 00007FF9C0650000 C:\WINDOWS\System32\combase.dll
+Loaded DLL at 00007FF9C1720000 C:\WINDOWS\System32\OLEAUT32.dll
+Loaded DLL at 00007FF9A61F0000 C:\Program Files\Python314\VCRUNTIME140_1.dll
+Loaded DLL at 00007FF9A39E0000 C:\Program Files\Python314\Lib\site-packages\win32\win32event.pyd
+Loaded DLL at 00007FF993EC0000 C:\Program Files\Python314\Lib\site-packages\win32\win32file.pyd
+Loaded DLL at 00007FF9BCC70000 C:\WINDOWS\SYSTEM32\MSWSOCK.dll
+Loaded DLL at 00007FF9B5CD0000 C:\WINDOWS\SYSTEM32\sfc.dll
+Loaded DLL at 00007FF9B5CB0000 C:\WINDOWS\SYSTEM32\sfc_os.DLL
+NtWriteFile(FileHandle=0x264, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40ded90 [0/0xe], Buffer=0x1bcb54a57f0, Length=0xe, ByteOffset=null, Key=null) => 0
+NtDeviceIoControlFile(FileHandle=0x250, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40ddc90 [0/0x10], IoControlCode=0x0001207b, InputBuffer=0x34b40ddca0, InputBufferLength=0x10, OutputBuffer=0x34b40ddca0, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x250, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40ddc90 [0/0x10], IoControlCode=0x0001207b, InputBuffer=0x34b40ddca0, InputBufferLength=0x10, OutputBuffer=0x34b40ddca0, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x250, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40ddd90 [0/0], IoControlCode=0x00012047, InputBuffer=0x34b40ddda0, InputBufferLength=0xa8, OutputBuffer=0x34b40dde30, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x250, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40dee20 [0/0x10], IoControlCode=0x00012003, InputBuffer=0x34b40dee80, InputBufferLength=0x14, OutputBuffer=0x34b40dee80, OutputBufferLength=0x10) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtDeviceIoControlFile(FileHandle=0x250, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40dec00 [0/0], IoControlCode=0x00012047, InputBuffer=0x34b40dec10, InputBufferLength=0xa8, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x250, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40dee70 [0/0], IoControlCode=0x0001200b, InputBuffer=0x34b40dee80, InputBufferLength=0xc, OutputBuffer=null, OutputBufferLength=0) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtDeviceIoControlFile(FileHandle=0x250, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40dece0 [0/0], IoControlCode=0x00012047, InputBuffer=0x34b40decf0, InputBufferLength=0xa8, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x250, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40dee40 [0/0x10], IoControlCode=0x0001202f, InputBuffer=null, InputBufferLength=0, OutputBuffer=0x34b40dee50, OutputBufferLength=0x10) => 0
+Loaded DLL at 00007FF988640000 C:\Program Files\Python314\DLLs\unicodedata.pyd
+NtDeviceIoControlFile(FileHandle=0x268, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40ddd90 [0/0], IoControlCode=0x00012047, InputBuffer=0x34b40ddda0, InputBufferLength=0xa8, OutputBuffer=0x34b40dde30, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x268, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40dec90 [0/0], IoControlCode=0x000120bf, InputBuffer=0x34b40dec60, InputBufferLength=0x20, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x268, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40deaa0 [0/0], IoControlCode=0x00012047, InputBuffer=0x34b40deab0, InputBufferLength=0xa8, OutputBuffer=0x34b40deb40, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x268, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40debf0 [0/0x10], IoControlCode=0x00012003, InputBuffer=0x34b40dec50, InputBufferLength=0x14, OutputBuffer=0x34b40dec50, OutputBufferLength=0x10) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtDeviceIoControlFile(FileHandle=0x268, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40de9d0 [0/0], IoControlCode=0x00012047, InputBuffer=0x34b40de9e0, InputBufferLength=0xa8, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x268, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40dec20 [0/0], IoControlCode=0x00012007, InputBuffer=0x34b40dec30, InputBufferLength=0x28, OutputBuffer=null, OutputBufferLength=0) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtDeviceIoControlFile(FileHandle=0x268, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40de9e0 [0/0], IoControlCode=0x00012047, InputBuffer=0x34b40de9f0, InputBufferLength=0xa8, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x250, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40de9e0 [0/0x14], IoControlCode=0x0001200c, InputBuffer=null, InputBufferLength=0, OutputBuffer=0x34b40decf0, OutputBufferLength=0x14) => 0
+NtDeviceIoControlFile(FileHandle=0x250, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40de9e0 [0/0], IoControlCode=0x00012010, InputBuffer=0x34b40de988, InputBufferLength=0x10, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x26c, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40de7b0 [0/0x10], IoControlCode=0x00012037, InputBuffer=0x34b40de790, InputBufferLength=4, OutputBuffer=0x34b40de7a0, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x26c, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40de660 [0/0], IoControlCode=0x00012047, InputBuffer=0x34b40de670, InputBufferLength=0xa8, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x26c, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40ddfc0 [0/0x10], IoControlCode=0x0001202f, InputBuffer=null, InputBufferLength=0, OutputBuffer=0x34b40ddfd0, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x268, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40dede0 [0/0xe], IoControlCode=0x0001201f, InputBuffer=0x34b40ded80, InputBufferLength=0x18, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x26c, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40dee00 [0/0xe], IoControlCode=0x00012017, InputBuffer=0x34b40ded60, InputBufferLength=0x18, OutputBuffer=null, OutputBufferLength=0) => 0
+NtWriteFile(FileHandle=0x268, Event=0x24c, ApcRoutine=null, ApcContext=0x1bcb565b518, IoStatusBlock=0x1bcb565b518, Buffer=0x1bcb54a57f0, Length=0xe, ByteOffset=0x34b40def20 [0], Key=null) => 0
+NtDeviceIoControlFile(FileHandle=0x26c, Event=0x264, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40dee00 [0/0xe], IoControlCode=0x00012017, InputBuffer=0x34b40ded60, InputBufferLength=0x18, OutputBuffer=null, OutputBufferLength=0) => 0
+pipe:              os.write wrote 14, os.read got 14
+socket, send():    send wrote 14, recv got 14
+socket, WriteFile: WriteFile wrote 14, recv got 14
+NtWriteFile(FileHandle=0x280, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x34b40df4c0 [0/0x99], Buffer=0x1bcb55356b0, Length=0x99, ByteOffset=null, Key=null) => 0
+Loaded DLL at 00007FF9BC190000 C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+Process 3544 exit code: 0

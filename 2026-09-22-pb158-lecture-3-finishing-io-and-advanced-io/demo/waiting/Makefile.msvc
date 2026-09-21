@@ -1,0 +1,35 @@
+# nmake /f Makefile.msvc   — x64 Developer Command Prompt. Traces need x64 binaries for NtTrace64.
+# Paths win.sh overrides from macOS; the defaults assume both are on PATH.
+NTTRACE = C:\Program Files\NtTrace64\NtTrace64.exe
+PYTHON = python
+# NtTrace64 does not exit when its stdout is redirected over SSH; the wrapper waits, then kills it.
+TRACE = powershell -NoProfile -ExecutionPolicy Bypass -File ..\nttrace-run.ps1 -NtTrace "$(NTTRACE)"
+CC = cl
+CFLAGS = /nologo /W4 /O2
+
+all: wait_peek.exe wait_iocp.exe
+
+wait_peek.exe: wait_peek.c
+	$(CC) $(CFLAGS) wait_peek.c
+
+wait_iocp.exe: wait_iocp.c
+	$(CC) $(CFLAGS) wait_iocp.c
+
+run: all
+	wait_peek.exe 100 2
+	wait_iocp.exe 100 2
+
+# The counts the slide is about. Count the captures with ..\nttrace-count.py.
+trace: all
+	$(TRACE) -Out NtTrace64-WAIT-PEEK.txt wait_peek.exe 100 2
+	$(TRACE) -Out NtTrace64-WAIT-IOCP.txt wait_iocp.exe 100 2
+	"$(PYTHON)" ..\nttrace-count.py NtTrace64-WAIT-PEEK.txt NtTrace64-WAIT-IOCP.txt
+
+# The PyWin32 pair, traced the same way (x64 Python).
+trace-py:
+	$(TRACE) -Out NtTrace64-WAIT-PEEK-PY.txt "$(PYTHON)" wait_peek_win32.py 100 2
+	$(TRACE) -Out NtTrace64-WAIT-IOCP-PY.txt "$(PYTHON)" wait_iocp_win32.py 100 2
+	"$(PYTHON)" ..\nttrace-count.py NtTrace64-WAIT-PEEK-PY.txt NtTrace64-WAIT-IOCP-PY.txt
+
+clean:
+	del /q *.exe *.obj 2>nul

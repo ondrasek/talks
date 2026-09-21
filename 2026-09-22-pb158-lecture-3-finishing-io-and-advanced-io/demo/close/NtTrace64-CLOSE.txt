@@ -1,0 +1,52 @@
+Process 19384 starting at 00007FF7455F1430 with command line: "close_twice.exe"
+C:\Users\administrator\pb158\demo\close\close_twice.exe
+Loaded DLL at 00007FF9C3290000 ntdll.dll
+Loaded DLL at 00007FF9C1D20000 C:\WINDOWS\System32\xtajit64se.dll
+Loaded DLL at 00007FF9C1380000 C:\WINDOWS\System32\KERNEL32.DLL
+Loaded DLL at 00007FF9BE5D0000 C:\WINDOWS\System32\KERNELBASE.dll
+NtCreateFile(FileHandle=0x3b8319e0b8 [0x8c], DesiredAccess=READ_CONTROL|SYNCHRONIZE|0x19f, ObjectAttributes=4:"\Connect", IoStatusBlock=0x3b8319daf0 [0/0x18], AllocationSize=null, FileAttributes=0, ShareAccess=7, CreateDisposition=2, CreateOptions=0x20, EaBuffer=0x182118ab500, EaLength=0x54b) => 0
+NtClose(Handle=0xa0) => 0
+NtClose(Handle=0xbc) => 0
+Loaded DLL at 00007FF9BE160000 C:\WINDOWS\SYSTEM32\apphelp.dll
+NtClose(Handle=0xc4) => 0
+NtClose(Handle=0xcc) => 0
+NtClose(Handle=0xcc) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xd0) => 0
+NtClose(Handle=0xd4) => 0
+NtClose(Handle=0xd8) => 0
+NtClose(Handle=0xdc) => 0
+NtClose(Handle=0xd8) => 0
+NtClose(Handle=0xe0) => 0
+NtClose(Handle=0xdc) => 0
+NtCreateFile(FileHandle=0x3b8319ded0 [0xe4], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\WINDOWS\AppPatch\01DD2B3C9708CF2D.sysmain.sdb", IoStatusBlock=0x3b8319dee0 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=5, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0xcc) => 0
+NtClose(Handle=0xe8) => 0
+NtClose(Handle=0xe8) => 0
+NtClose(Handle=0xec) => 0
+NtClose(Handle=0xf4) => 0
+NtCreateFile(FileHandle=0x3b8319dad0 [0xdc], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Users\administrator\pb158\demo\close\close_twice.exe", IoStatusBlock=0x3b8319da60 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=1, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0xf4) => 0
+NtClose(Handle=0xdc) => 0
+NtCreateFile(FileHandle=0x3b8319d908 [0xf4], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Users\administrator\pb158\demo\close\close_twice.exe", IoStatusBlock=0x3b8319d870 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=1, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0xe8) => 0
+NtClose(Handle=0xf4) => 0
+NtClose(Handle=0xf0) => 0
+NtClose(Handle=0xe4) => 0
+NtClose(Handle=0xd8) => 0
+Initial breakpoint
+NtCreateFile(FileHandle=0x3b8319f978 [0xd8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes=0x5c:"closed.txt", IoStatusBlock=0x3b8319f9b0 [0/3], AllocationSize=null, FileAttributes=0x80, ShareAccess=0, CreateDisposition=5, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtWriteFile(FileHandle=0xd8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x3b8319fb30 [0/0xe], Buffer=0x7ff745606338, Length=0xe, ByteOffset=null, Key=null) => 0
+NtClose(Handle=0xd8) => 0
+Exception raised by attempted close of an invalid handle
+Ignoring unhandled exception from close of an invalid handle
+NtClose(Handle=0xd8) => 0x0000003b8319f430 [317 'The system cannot find message text for message number 0x%1 in the message file for %2.']
+RTL: RtlNtStatusToDosError(0x8319f430): No Valid Win32 Error Mapping
+RTL: Edit ntos\rtl\generr.c to correct the problem
+RTL: ERROR_MR_MID_NOT_FOUND is being returned
+first  CloseHandle: ok
+second CloseHandle: failed, error 317 (ERROR_INVALID_HANDLE is 6)
+NtWriteFile(FileHandle=0xac4, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x3b8319e330 [0/0x5b], Buffer=0x3b8319e450, Length=0x5b, ByteOffset=null, Key=null) => 0
+Loaded DLL at 00007FF9BC190000 C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+Loaded DLL at 00007FF9C18D0000 C:\WINDOWS\System32\msvcrt.dll
+Thread 9204 exit code: 0

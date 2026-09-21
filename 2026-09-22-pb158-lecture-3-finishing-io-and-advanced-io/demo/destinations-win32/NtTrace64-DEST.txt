@@ -1,0 +1,52 @@
+Process 15576 starting at 00007FF74B5C18A0 with command line: "dest.exe"
+C:\Users\administrator\pb158\demo\destinations-win32\dest.exe
+Loaded DLL at 00007FF9C3290000 ntdll.dll
+Loaded DLL at 00007FF9C1D20000 C:\WINDOWS\System32\xtajit64se.dll
+Loaded DLL at 00007FF9C1380000 C:\WINDOWS\System32\KERNEL32.DLL
+Loaded DLL at 00007FF9BE5D0000 C:\WINDOWS\System32\KERNELBASE.dll
+NtCreateFile(FileHandle=0x5fe5f4ddb8 [0x88], DesiredAccess=READ_CONTROL|SYNCHRONIZE|0x19f, ObjectAttributes=4:"\Connect", IoStatusBlock=0x5fe5f4d7f0 [0/0x18], AllocationSize=null, FileAttributes=0, ShareAccess=7, CreateDisposition=2, CreateOptions=0x20, EaBuffer=0x1f526d0b4d0, EaLength=0x54b) => 0
+NtDeviceIoControlFile(FileHandle=0x88, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4dd80 [0/0], IoControlCode=0x00500023, InputBuffer=null, InputBufferLength=0, OutputBuffer=0x5fe5f4dd70, OutputBufferLength=8) => 0
+NtDeviceIoControlFile(FileHandle=0x88, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4dc20, IoControlCode=0x00500016, InputBuffer=0x5fe5f4dc30, InputBufferLength=0x30, OutputBuffer=null, OutputBufferLength=0) => 0xc00700bb [187 'The specified system semaphore name was not found.']
+Loaded DLL at 00007FF9BE160000 C:\WINDOWS\SYSTEM32\apphelp.dll
+NtCreateFile(FileHandle=0x5fe5f4dbd0 [0xcc], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\WINDOWS\AppPatch\01DD2B3C9708CF2D.sysmain.sdb", IoStatusBlock=0x5fe5f4dbe0 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=5, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtCreateFile(FileHandle=0x5fe5f4d7d0 [0xd8], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Users\administrator\pb158\demo\destinations-win32\dest.exe", IoStatusBlock=0x5fe5f4d760 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=1, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtCreateFile(FileHandle=0x5fe5f4d608 [0xe0], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Users\administrator\pb158\demo\destinations-win32\dest.exe", IoStatusBlock=0x5fe5f4d570 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=1, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+Loaded DLL at 00007FF9C0F80000 C:\WINDOWS\System32\WS2_32.dll
+Loaded DLL at 00007FF9BEE00000 C:\WINDOWS\System32\ucrtbase.dll
+Loaded DLL at 00007FF9C1A20000 C:\WINDOWS\System32\RPCRT4.dll
+Initial breakpoint
+NtWriteFile(FileHandle=0x108, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f600 [0/0xe], Buffer=0x7ff74b5d6390, Length=0xe, ByteOffset=null, Key=null) => 0
+Loaded DLL at 00007FF9BCC70000 C:\WINDOWS\system32\mswsock.dll
+NtCreateFile(FileHandle=0x5fe5f4f2f0 [0x124], DesiredAccess=WRITE_DAC|SYNCHRONIZE|GENERIC_READ|GENERIC_WRITE, ObjectAttributes="\Device\Afd\Endpoint", IoStatusBlock=0x5fe5f4f340 [0/0], AllocationSize=null, FileAttributes=0, ShareAccess=3, CreateDisposition=3, CreateOptions=0, EaBuffer=0x5fe5f4f390, EaLength=0x39) => 0
+NtDeviceIoControlFile(FileHandle=0x124, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f1e0 [0/0x10], IoControlCode=0x0001207b, InputBuffer=0x5fe5f4f1f0, InputBufferLength=0x10, OutputBuffer=0x5fe5f4f1f0, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x124, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f1e0 [0/0x10], IoControlCode=0x0001207b, InputBuffer=0x5fe5f4f1f0, InputBufferLength=0x10, OutputBuffer=0x5fe5f4f1f0, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x124, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f2e0 [0/0], IoControlCode=0x00012047, InputBuffer=0x5fe5f4f2f0, InputBufferLength=0xa8, OutputBuffer=0x5fe5f4f380, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x124, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f4f0 [0/0x10], IoControlCode=0x00012003, InputBuffer=0x5fe5f4f550, InputBufferLength=0x14, OutputBuffer=0x5fe5f4f550, OutputBufferLength=0x10) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtDeviceIoControlFile(FileHandle=0x124, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f2d0 [0/0], IoControlCode=0x00012047, InputBuffer=0x5fe5f4f2e0, InputBufferLength=0xa8, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x124, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f4f0 [0/0], IoControlCode=0x0001200b, InputBuffer=0x5fe5f4f500, InputBufferLength=0xc, OutputBuffer=null, OutputBufferLength=0) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtDeviceIoControlFile(FileHandle=0x124, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f360 [0/0], IoControlCode=0x00012047, InputBuffer=0x5fe5f4f370, InputBufferLength=0xa8, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x124, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f550 [0/0x10], IoControlCode=0x0001202f, InputBuffer=null, InputBufferLength=0, OutputBuffer=0x5fe5f4f560, OutputBufferLength=0x10) => 0
+NtCreateFile(FileHandle=0x5fe5f4f2f0 [0x128], DesiredAccess=WRITE_DAC|SYNCHRONIZE|GENERIC_READ|GENERIC_WRITE, ObjectAttributes="\Device\Afd\Endpoint", IoStatusBlock=0x5fe5f4f340 [0/0], AllocationSize=null, FileAttributes=0, ShareAccess=3, CreateDisposition=3, CreateOptions=0, EaBuffer=0x5fe5f4f390, EaLength=0x39) => 0
+NtDeviceIoControlFile(FileHandle=0x128, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f2e0 [0/0], IoControlCode=0x00012047, InputBuffer=0x5fe5f4f2f0, InputBufferLength=0xa8, OutputBuffer=0x5fe5f4f380, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x128, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f3c0 [0/0], IoControlCode=0x000120bf, InputBuffer=0x5fe5f4f390, InputBufferLength=0x20, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x128, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f1d0 [0/0], IoControlCode=0x00012047, InputBuffer=0x5fe5f4f1e0, InputBufferLength=0xa8, OutputBuffer=0x5fe5f4f270, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x128, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f320 [0/0x10], IoControlCode=0x00012003, InputBuffer=0x5fe5f4f380, InputBufferLength=0x14, OutputBuffer=0x5fe5f4f380, OutputBufferLength=0x10) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtDeviceIoControlFile(FileHandle=0x128, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f100 [0/0], IoControlCode=0x00012047, InputBuffer=0x5fe5f4f110, InputBufferLength=0xa8, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x128, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f350 [0/0], IoControlCode=0x00012007, InputBuffer=0x5fe5f4f360, InputBufferLength=0x28, OutputBuffer=null, OutputBufferLength=0) => 0x103 [997 'Overlapped I/O operation is in progress.']
+NtDeviceIoControlFile(FileHandle=0x128, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f110 [0/0], IoControlCode=0x00012047, InputBuffer=0x5fe5f4f120, InputBufferLength=0xa8, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x124, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f1b0 [0/0x14], IoControlCode=0x0001200c, InputBuffer=null, InputBufferLength=0, OutputBuffer=0x5fe5f4f4c0, OutputBufferLength=0x14) => 0
+NtCreateFile(FileHandle=0x5fe5f4efb0 [0x12c], DesiredAccess=WRITE_DAC|SYNCHRONIZE|GENERIC_READ|GENERIC_WRITE, ObjectAttributes="\Device\Afd\Endpoint", IoStatusBlock=0x5fe5f4f000 [0/0], AllocationSize=null, FileAttributes=0, ShareAccess=3, CreateDisposition=3, CreateOptions=0, EaBuffer=0x5fe5f4f050, EaLength=0x39) => 0
+NtDeviceIoControlFile(FileHandle=0x124, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f1b0 [0/0], IoControlCode=0x00012010, InputBuffer=0x5fe5f4f158, InputBufferLength=0x10, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x12c, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4ef80 [0/0x10], IoControlCode=0x00012037, InputBuffer=0x5fe5f4ef60, InputBufferLength=4, OutputBuffer=0x5fe5f4ef70, OutputBufferLength=0x10) => 0
+NtDeviceIoControlFile(FileHandle=0x12c, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4ee30 [0/0], IoControlCode=0x00012047, InputBuffer=0x5fe5f4ee40, InputBufferLength=0xa8, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x128, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f580 [0/0xe], IoControlCode=0x0001201f, InputBuffer=0x5fe5f4f520, InputBufferLength=0x18, OutputBuffer=null, OutputBufferLength=0) => 0
+NtDeviceIoControlFile(FileHandle=0x12c, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f580 [0/0xe], IoControlCode=0x00012017, InputBuffer=0x5fe5f4f4e0, InputBufferLength=0x18, OutputBuffer=null, OutputBufferLength=0) => 0
+NtWriteFile(FileHandle=0x128, Event=0x130, ApcRoutine=null, ApcContext=0x5fe5f4f728, IoStatusBlock=0x5fe5f4f728, Buffer=0x7ff74b5d6390, Length=0xe, ByteOffset=0x5fe5f4f5f0 [0], Key=null) => 0
+NtDeviceIoControlFile(FileHandle=0x12c, Event=0x120, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4f580 [0/0xe], IoControlCode=0x00012017, InputBuffer=0x5fe5f4f4e0, InputBufferLength=0x18, OutputBuffer=null, OutputBufferLength=0) => 0
+pipe:              WriteFile wrote 14, ReadFile got 14
+socket, send():    send wrote 14, recv got 14
+socket, WriteFile: WriteFile wrote 14, recv got 14
+NtWriteFile(FileHandle=0x8c8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x5fe5f4e030 [0/0x9b], Buffer=0x5fe5f4e150, Length=0x9b, ByteOffset=null, Key=null) => 0
+Loaded DLL at 00007FF9BC190000 C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+Loaded DLL at 00007FF9C18D0000 C:\WINDOWS\System32\msvcrt.dll
+Process 15576 exit code: 0

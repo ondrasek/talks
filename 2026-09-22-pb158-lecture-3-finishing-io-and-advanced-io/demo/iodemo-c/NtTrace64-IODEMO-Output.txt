@@ -1,0 +1,45 @@
+	NtTrace64 -filter NtCreateFile,NtWriteFile,NtClose iodemo.exe iodemo.out
+Process 7080 starting at 00007FF7AD3E23B0 with command line: "iodemo.exe iodemo.out"
+\\Mac\Home\Obsidian\Talks\2026-09-15-pb158-lecture-2-io-from-python-to-the-os\demo\iodemo-c\iodemo.exe
+Loaded DLL at 00007FF9C3290000 ntdll.dll
+Loaded DLL at 00007FF9C1D20000 C:\WINDOWS\System32\xtajit64se.dll
+Loaded DLL at 00007FF9C1380000 C:\WINDOWS\System32\KERNEL32.DLL
+Loaded DLL at 00007FF9BE5D0000 C:\WINDOWS\System32\KERNELBASE.dll
+NtCreateFile(FileHandle=0xe14f7e348 [0x90], DesiredAccess=READ_CONTROL|SYNCHRONIZE|0x19f, ObjectAttributes=4:"\Connect", IoStatusBlock=0xe14f7dd80 [0/0x18], AllocationSize=null, FileAttributes=0, ShareAccess=7, CreateDisposition=2, CreateOptions=0x20, EaBuffer=0x12b65d6b900, EaLength=0x54b) => 0
+NtClose(Handle=0x98) => 0
+NtClose(Handle=0xb8) => 0
+Loaded DLL at 00007FF9BE160000 C:\WINDOWS\SYSTEM32\apphelp.dll
+NtClose(Handle=0xc4) => 0
+NtClose(Handle=0xd8) => 0
+NtClose(Handle=0xdc) => 0
+NtClose(Handle=0xe0) => 0
+NtClose(Handle=0xe4) => 0
+NtClose(Handle=0xe8) => 0
+NtClose(Handle=0xec) => 0
+NtClose(Handle=0xf0) => 0
+NtClose(Handle=0xf8) => 0
+NtClose(Handle=0xfc) => 0
+NtClose(Handle=0xf4) => 0
+NtCreateFile(FileHandle=0xe14f7e160 [0xf4], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\WINDOWS\AppPatch\01DD2B3C9708CF2D.sysmain.sdb", IoStatusBlock=0xe14f7e170 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=5, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x104) => 0
+NtClose(Handle=0x108) => 0
+NtClose(Handle=0x10c) => 0
+NtClose(Handle=0x110) => 0
+NtClose(Handle=0x118) => 0
+NtCreateFile(FileHandle=0xe14f7dd60 [0x11c], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\Z:\Obsidian\Talks\2026-09-15-pb158-lecture-2-io-from-python-to-the-os\demo\iodemo-c\iodemo.exe", IoStatusBlock=0xe14f7dcf0 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=1, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x120) => 0
+NtClose(Handle=0x11c) => 0
+NtCreateFile(FileHandle=0xe14f7db98 [0x11c], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\Z:\Obsidian\Talks\2026-09-15-pb158-lecture-2-io-from-python-to-the-os\demo\iodemo-c\iodemo.exe", IoStatusBlock=0xe14f7db00 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=1, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtClose(Handle=0x124) => 0
+NtClose(Handle=0x11c) => 0
+NtClose(Handle=0x114) => 0
+NtClose(Handle=0xf4) => 0
+NtClose(Handle=0x100) => 0
+Initial breakpoint
+NtCreateFile(FileHandle=0xe14f7f958, DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes=0x58:"no-such-file.txt", IoStatusBlock=0xe14f7f990, AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0xc0000034 [2 'The system cannot find the file specified.']
+NtCreateFile(FileHandle=0xe14f7f958 [0x124], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes=0x58:"iodemo.out", IoStatusBlock=0xe14f7f990 [0/3], AllocationSize=null, FileAttributes=0x80, ShareAccess=3, CreateDisposition=5, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtWriteFile(FileHandle=0x124, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0xe14f7fb90 [0/0xe], Buffer=0x12b65d78050, Length=0xe, ByteOffset=null, Key=null) => 0
+NtClose(Handle=0x124) => 0
+Loaded DLL at 00007FF9BC190000 C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+Loaded DLL at 00007FF9C18D0000 C:\WINDOWS\System32\msvcrt.dll
+Process 7080 exit code: 0

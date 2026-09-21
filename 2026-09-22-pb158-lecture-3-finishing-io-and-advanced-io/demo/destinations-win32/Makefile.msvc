@@ -1,0 +1,28 @@
+# nmake /f Makefile.msvc   — x64 Developer Command Prompt (NtTrace64 traces x64 binaries)
+# Paths win.sh overrides from macOS; the defaults assume both are on PATH.
+NTTRACE = C:\Program Files\NtTrace64\NtTrace64.exe
+PYTHON = python
+# NtTrace64 does not exit when its stdout is redirected over SSH; the wrapper waits, then kills it.
+TRACE = powershell -NoProfile -ExecutionPolicy Bypass -File ..\nttrace-run.ps1 -NtTrace "$(NTTRACE)"
+CC = cl
+CFLAGS = /nologo /W4 /O2
+
+all: dest.exe
+
+dest.exe: dest.c
+	$(CC) $(CFLAGS) dest.c ws2_32.lib
+
+run: dest.exe
+	dest.exe
+
+# The three native calls the slide compares. Keep the pipe and socket calls only.
+trace: dest.exe
+	$(TRACE) -Out NtTrace64-DEST.txt -filter NtWriteFile,NtDeviceIoControlFile,NtCreateFile dest.exe
+	"$(PYTHON)" ..\nttrace-count.py NtTrace64-DEST.txt
+
+trace-py:
+	$(TRACE) -Out NtTrace64-DEST-PY.txt -filter NtWriteFile,NtDeviceIoControlFile,NtCreateFile $(PYTHON) dest_win32.py
+	"$(PYTHON)" ..\nttrace-count.py NtTrace64-DEST-PY.txt
+
+clean:
+	del /q dest.exe dest.obj 2>nul

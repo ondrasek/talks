@@ -1,0 +1,32 @@
+# nmake /f Makefile.msvc   — from an x64 Developer Command Prompt (NtTrace64 traces x64 binaries)
+# Paths win.sh overrides from macOS; the defaults assume both are on PATH.
+NTTRACE = C:\Program Files\NtTrace64\NtTrace64.exe
+PYTHON = python
+# NtTrace64 does not exit when its stdout is redirected over SSH; the wrapper waits, then kills it.
+TRACE = powershell -NoProfile -ExecutionPolicy Bypass -File ..\nttrace-run.ps1 -NtTrace "$(NTTRACE)"
+CC = cl
+CFLAGS = /nologo /W4 /O2
+
+all: iocost.exe
+
+iocost.exe: iocost.c
+	$(CC) $(CFLAGS) iocost.c
+
+# The four modes, timed and counted by the kernel.
+run: iocost.exe
+	iocost.exe default
+	iocost.exe flush
+	iocost.exe writethrough
+	iocost.exe nobuffer
+
+# The traces the slide reads: which native calls each mode makes.
+trace: iocost.exe
+	$(TRACE) -Out NtTrace64-IOCOST-flush.txt -filter NtWriteFile,NtFlushBuffersFile,NtCreateFile iocost.exe flush
+	$(TRACE) -Out NtTrace64-IOCOST-default.txt -filter NtWriteFile,NtFlushBuffersFile,NtCreateFile iocost.exe default
+
+# The Windows twin of watch_dirty.py (PyWin32).
+watch:
+	"$(PYTHON)" watch_dirty_win32.py 100 40960 90
+
+clean:
+	del /q iocost.exe iocost.obj saved.bin 2>nul

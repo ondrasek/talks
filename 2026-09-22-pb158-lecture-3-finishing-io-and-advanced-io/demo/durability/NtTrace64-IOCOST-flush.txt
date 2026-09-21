@@ -1,0 +1,218 @@
+Process 21496 starting at 00007FF617111900 with command line: "iocost.exe flush"
+C:\Users\administrator\pb158\demo\durability\iocost.exe
+Loaded DLL at 00007FF9C3290000 ntdll.dll
+Loaded DLL at 00007FF9C1D20000 C:\WINDOWS\System32\xtajit64se.dll
+Loaded DLL at 00007FF9C1380000 C:\WINDOWS\System32\KERNEL32.DLL
+Loaded DLL at 00007FF9BE5D0000 C:\WINDOWS\System32\KERNELBASE.dll
+NtCreateFile(FileHandle=0x8a88fdda8 [0x8c], DesiredAccess=READ_CONTROL|SYNCHRONIZE|0x19f, ObjectAttributes=4:"\Connect", IoStatusBlock=0x8a88fd7e0 [0/0x18], AllocationSize=null, FileAttributes=0, ShareAccess=7, CreateDisposition=2, CreateOptions=0x20, EaBuffer=0x1db717cb4e0, EaLength=0x54b) => 0
+Loaded DLL at 00007FF9BE160000 C:\WINDOWS\SYSTEM32\apphelp.dll
+NtCreateFile(FileHandle=0x8a88fdbc0 [0xd0], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\WINDOWS\AppPatch\01DD2B3C9708CF2D.sysmain.sdb", IoStatusBlock=0x8a88fdbd0 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=5, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtCreateFile(FileHandle=0x8a88fd7c0 [0x7c], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Users\administrator\pb158\demo\durability\iocost.exe", IoStatusBlock=0x8a88fd750 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=1, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtCreateFile(FileHandle=0x8a88fd5f8 [0x7c], DesiredAccess=SYNCHRONIZE|GENERIC_READ|0x80, ObjectAttributes="\??\C:\Users\administrator\pb158\demo\durability\iocost.exe", IoStatusBlock=0x8a88fd560 [0/1], AllocationSize=null, FileAttributes=0x80, ShareAccess=1, CreateDisposition=1, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+Initial breakpoint
+NtCreateFile(FileHandle=0x8a88ff5b8 [0xe8], DesiredAccess=SYNCHRONIZE|GENERIC_WRITE|0x80, ObjectAttributes=0x5c:"saved.bin", IoStatusBlock=0x8a88ff5f0 [0/3], AllocationSize=null, FileAttributes=0x80, ShareAccess=0, CreateDisposition=5, CreateOptions=0x60, EaBuffer=null, EaLength=0) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+NtWriteFile(FileHandle=0xe8, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88ff770 [0/0x1000], Buffer=0x1db717d9000, Length=0x1000, ByteOffset=null, Key=null) => 0
+NtFlushBuffersFile(FileHandle=0xe8, IoStatusBlock=0x8a88ff790 [0/0]) => 0
+done: 100 records x 4096 B, mode=flush, 108.4 ms, kernel write operations: 100
+NtWriteFile(FileHandle=0xa24, Event=0, ApcRoutine=null, ApcContext=null, IoStatusBlock=0x8a88fe020 [0/0x50], Buffer=0x8a88fe140, Length=0x50, ByteOffset=null, Key=null) => 0
+Loaded DLL at 00007FF9BC190000 C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+Loaded DLL at 00007FF9C18D0000 C:\WINDOWS\System32\msvcrt.dll
+Process 21496 exit code: 0
