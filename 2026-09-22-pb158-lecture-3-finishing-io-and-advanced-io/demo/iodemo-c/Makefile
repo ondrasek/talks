@@ -4,6 +4,8 @@
 CC     ?= cc
 CFLAGS ?= -std=c11 -Wall -Wextra -O0 -g
 IMAGE  ?= pb158-iodemo-c
+# docker or podman — both accept the same verbs used here.
+RUNTIME ?= docker
 
 iodemo: iodemo.c
 	$(CC) $(CFLAGS) -o $@ $<
@@ -12,6 +14,17 @@ iodemo: iodemo.c
 .PHONY: trace
 trace: iodemo
 	strace -e trace=openat,write,close ./iodemo iodemo.out
+
+# Lecture 3, Part 2 — the second tracer, one layer up. Plain: the C library
+# calls (three fwrite). -S: the system calls as well, so the one write shows
+# up INSIDE fclose, not inside any fwrite. -c: a count per library call.
+.PHONY: ltrace ltrace-syscalls ltrace-count
+ltrace: iodemo
+	ltrace ./iodemo iodemo.out
+ltrace-syscalls: iodemo
+	ltrace -S ./iodemo iodemo.out
+ltrace-count: iodemo
+	ltrace -c ./iodemo iodemo.out
 
 # The kernel's own count of this process's write operations (/proc/self/io).
 .PHONY: count
@@ -39,20 +52,28 @@ socket-trace: iodemo
 # ── the Linux container: Debian + gcc + strace + ltrace, program built inside ─
 .PHONY: image
 image:
-	docker build -t $(IMAGE) .
+	$(RUNTIME) build -t $(IMAGE) .
 
 # strace and ltrace are ptrace clients; Docker drops CAP_SYS_PTRACE by default.
 .PHONY: container-trace
 container-trace: image
-	docker run --rm --cap-add SYS_PTRACE $(IMAGE)
+	$(RUNTIME) run --rm --cap-add SYS_PTRACE $(IMAGE)
 
 .PHONY: container-count
 container-count: image
-	docker run --rm $(IMAGE) ./iodemo iodemo.out --count
+	$(RUNTIME) run --rm $(IMAGE) ./iodemo iodemo.out --count
+
+.PHONY: container-ltrace container-ltrace-syscalls container-ltrace-count
+container-ltrace: image
+	$(RUNTIME) run --rm --cap-add SYS_PTRACE $(IMAGE) make ltrace
+container-ltrace-syscalls: image
+	$(RUNTIME) run --rm --cap-add SYS_PTRACE $(IMAGE) make ltrace-syscalls
+container-ltrace-count: image
+	$(RUNTIME) run --rm --cap-add SYS_PTRACE $(IMAGE) make ltrace-count
 
 .PHONY: container-socket
 container-socket: image
-	docker run --rm --cap-add SYS_PTRACE $(IMAGE) make socket-trace
+	$(RUNTIME) run --rm --cap-add SYS_PTRACE $(IMAGE) make socket-trace
 
 .PHONY: clean
 clean:

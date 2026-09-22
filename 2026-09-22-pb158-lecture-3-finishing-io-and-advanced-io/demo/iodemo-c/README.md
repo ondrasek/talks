@@ -167,6 +167,91 @@ side for three `fwrite`s; the close is `close(3)` and `NtClose(Handle=0x124)`.
 Every difference is the operating system's. That is the comparison the
 lecture was built around, and it exists now.
 
+## Under `ltrace` — the same run one layer up, captured 2026-09-22
+
+Lecture 3, Part 2. Same image, same binary, rebuilt and run with podman on
+the lecturer's machine (podman 6.1.2, `debian:trixie-slim`, arm64). Three
+targets, native or in the container:
+
+```sh
+make ltrace            # ltrace ./iodemo iodemo.out      — the C library calls
+make ltrace-syscalls   # ltrace -S ./iodemo iodemo.out   — system calls as well
+make ltrace-count      # ltrace -c ./iodemo iodemo.out   — a count per library call
+make RUNTIME=podman container-ltrace-syscalls   # any of the three, in the container
+```
+
+`make ltrace`, verbatim after `__libc_start_main` and the `strcmp` that parses
+the argument:
+
+```text
+fopen("no-such-file.txt", "rb")                  = nil
+fopen("iodemo.out", "wb")                        = 0xb9bc46e352a0
+fwrite("one\n", 1, 4, 0xb9bc46e352a0)            = 4
+fwrite("two\n", 1, 4, 0xb9bc46e352a0)            = 4
+fwrite("three\n", 1, 6, 0xb9bc46e352a0)          = 6
+fclose(0xb9bc46e352a0)                           = 0
++++ exited (status 0) +++
+```
+
+`make ltrace-syscalls` (`ltrace -S`), the program's own lines. The loader's
+thirty-odd `mmap`/`mprotect`/`openat` lines before `__libc_start_main` are cut;
+nothing after it is:
+
+```text
+__libc_start_main(["./iodemo", "iodemo.out"] <unfinished ...>
+strcmp("iodemo.out", "--count")                  = 60
+fopen("no-such-file.txt", "rb" <unfinished ...>
+278@SYS(0xe58dac136768, 8, 1, 1)                 = 8
+brk@SYS(nil)                                     = 0xba81161d2000
+brk@SYS(0xba81161f3000)                          = 0xba81161f3000
+openat@SYS(AT_FDCWD, "no-such-file.txt", 0, 00)  = -2
+<... fopen resumed> )                            = nil
+fopen("iodemo.out", "wb" <unfinished ...>
+openat@SYS(AT_FDCWD, "iodemo.out", 0x241, 0666)  = 3
+<... fopen resumed> )                            = 0xba81161d22a0
+fwrite("one\n", 1, 4, 0xba81161d22a0 <unfinished ...>
+fstat@SYS(3, 0xffffcce4a7a8)                     = 0
+<... fwrite resumed> )                           = 4
+fwrite("two\n", 1, 4, 0xba81161d22a0)            = 4
+fwrite("three\n", 1, 6, 0xba81161d22a0)          = 6
+fclose(0xba81161d22a0 <unfinished ...>
+write@SYS(3, "one\ntwo\nthree\n", 14)            = 14
+close@SYS(3)                                     = 0
+<... fclose resumed> )                           = 0
+__cxa_finalize(0xba80efc60068)                   = <void>
+exit_group@SYS(0 <no return ...>
++++ exited (status 0) +++
+```
+
+**This is the slide's answer to both predictions.** Three `fwrite` lines, one
+per source line. And the one `write@SYS` of fourteen bytes sits *inside*
+`fclose`, between `fclose(... <unfinished ...>` and `<... fclose resumed>`, not
+inside any `fwrite`. The first `fwrite` triggered an `fstat` instead: the C
+library asked the kernel what kind of file descriptor 3 is, to choose a
+buffering mode. Everything the room predicted from the stack diagram is on
+one screen: the library call boundary above, the system call boundary below,
+three calls in, one call out.
+
+`make ltrace-count` (`ltrace -c`), verbatim:
+
+```text
+% time     seconds  usecs/call     calls      function
+------ ----------- ----------- --------- --------------------
+ 55.43    0.001200        1200         1 __libc_start_main
+ 19.82    0.000429         214         2 fopen
+ 12.10    0.000262          87         3 fwrite
+  5.87    0.000127         127         1 fclose
+  2.36    0.000051          51         1 strcmp
+  2.22    0.000048          48         1 __cxa_finalize
+  2.22    0.000048          48         1 exit_group
+------ ----------- ----------- --------- --------------------
+100.00    0.002165                    10 total
+```
+
+Three `fwrite`, two `fopen`, one `fclose`: the count of library calls, the
+way `strace -c` counts system calls. The times are under a tracer and mean
+nothing; count under the tracer, time without it.
+
 ## Writing to a pipe instead of a file — captured 2026-09-20
 
 Lecture 3, section 5. Same binary, same container, the output path is

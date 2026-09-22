@@ -35,6 +35,7 @@ A slide never shows a number that section does not have.
 | [`iodemo-c/`](iodemo-c/README.md) | `iodemo.c` — the program on the slides; `Makefile` (GNU) and `Makefile.msvc` | Linux, Windows | Debian + gcc + strace + ltrace |
 | [`iodemo-python/`](iodemo-python/README.md) | `iodemo.py` — the same program one level up, and the one-liner | Linux, Windows | `python:3.12-slim` + strace + ltrace |
 | [`destinations-win32/`](destinations-win32/README.md) | `dest.c` / `dest_win32.py` — fourteen bytes to a pipe, to a socket via `send`, and to the same socket via `WriteFile` (Lecture 3, Part 8, Windows half) | Windows only | — |
+| `osexit.py` (this folder) | four lines: `print("hello")`, then `os._exit(0)` — run it with stdout on a pipe (`python3 osexit.py | cat`) and with stdout on the terminal, and compare what arrives (Lecture 3, Part 2: what dies with the process) | Linux, Windows | — |
 | [`iocount-win32/`](iocount-win32/README.md) | `iocount_win32.py` — the kernel's write count through PyWin32 | Windows only | — |
 
 The three `iodemo*` folders are carried unchanged from Lecture 2 (its slides 33–63 are this lecture's section 2). `iodemo-c/README.md` gains one new capture: the program writing to a pipe (section 5). Each folder's README says how to build, run, trace and count there. The two

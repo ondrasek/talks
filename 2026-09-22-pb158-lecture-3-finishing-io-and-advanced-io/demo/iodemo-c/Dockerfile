@@ -9,6 +9,8 @@
 #   docker run --rm --cap-add SYS_PTRACE pb158-iodemo-c            # the trace
 #   docker run --rm pb158-iodemo-c ./iodemo iodemo.out --count     # the count
 #   docker run --rm --cap-add SYS_PTRACE pb158-iodemo-c ltrace ./iodemo iodemo.out
+#   docker run --rm --cap-add SYS_PTRACE pb158-iodemo-c make ltrace-syscalls  # Lecture 3, Part 2: ltrace -S
+#   docker run --rm --cap-add SYS_PTRACE pb158-iodemo-c make ltrace-count     # ltrace -c
 #   docker run --rm --cap-add SYS_PTRACE pb158-iodemo-c make socket-trace       # Lecture 3, section 5
 #
 # --cap-add SYS_PTRACE, belt and braces: Docker drops CAP_SYS_PTRACE, and the
