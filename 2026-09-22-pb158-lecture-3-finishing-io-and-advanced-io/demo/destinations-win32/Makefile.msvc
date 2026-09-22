@@ -20,6 +20,9 @@ trace: dest.exe
 	$(TRACE) -Out NtTrace64-DEST.txt -filter NtWriteFile,NtDeviceIoControlFile,NtCreateFile dest.exe
 	"$(PYTHON)" ..\nttrace-count.py NtTrace64-DEST.txt
 
+# `count`: the three legs' native calls, counted from the capture.
+count: trace
+
 trace-py:
 	$(TRACE) -Out NtTrace64-DEST-PY.txt -filter NtWriteFile,NtDeviceIoControlFile,NtCreateFile $(PYTHON) dest_win32.py
 	"$(PYTHON)" ..\nttrace-count.py NtTrace64-DEST-PY.txt

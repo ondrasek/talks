@@ -42,6 +42,7 @@ container-count: image
 .PHONY: win-build win-run win-trace win-trace-py win-fetch
 win-build:    ; ../win.sh build durability
 win-run:      ; ../win.sh run durability
+win-count:    ; ../win.sh count durability
 win-watch:    ; ../win.sh watch
 win-trace:    ; ../win.sh trace durability
 win-trace-py: ; ../win.sh trace-py durability

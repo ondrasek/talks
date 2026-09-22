@@ -25,11 +25,17 @@ trace: all
 	$(TRACE) -Out NtTrace64-WAIT-IOCP.txt wait_iocp.exe 100 2
 	"$(PYTHON)" ..\nttrace-count.py NtTrace64-WAIT-PEEK.txt NtTrace64-WAIT-IOCP.txt
 
+# `count`, as on Linux: the two programs' native calls, counted. NtTrace64 is the
+# tracer here, so counting IS tracing — the capture files are the by-product.
+count: trace
+
 # The PyWin32 pair, traced the same way (x64 Python).
 trace-py:
 	$(TRACE) -Out NtTrace64-WAIT-PEEK-PY.txt "$(PYTHON)" wait_peek_win32.py 100 2
 	$(TRACE) -Out NtTrace64-WAIT-IOCP-PY.txt "$(PYTHON)" wait_iocp_win32.py 100 2
 	"$(PYTHON)" ..\nttrace-count.py NtTrace64-WAIT-PEEK-PY.txt NtTrace64-WAIT-IOCP-PY.txt
+
+count-py: trace-py
 
 clean:
 	del /q *.exe *.obj 2>nul

@@ -230,7 +230,8 @@ make container-watch  # the watch above, on any machine with Docker
 make container-count  # the counts above, on any machine with Docker
 
 make win-build        # the Windows half, from macOS over SSH (../win.sh): iocost.exe
-make win-run          # iocost.exe, the four modes
+make win-run          # iocost.exe, the four modes, timed and counted by the kernel (GetProcessIoCounters)
+make win-count        # the same — on Windows the program carries its own count
 make win-watch        # the prediction, Windows: watch_dirty_win32.py (PyWin32) — save.py, then the Cache Manager's dirty pages until they drain
 make win-trace        # iocost.exe under NtTrace64, captures fetched back
 ```

@@ -27,6 +27,7 @@ container-count: image
 .PHONY: win-build win-run win-trace win-trace-py win-fetch
 win-build:    ; ../win.sh build waiting
 win-run:      ; ../win.sh run waiting
+win-count:    ; ../win.sh count waiting
 win-trace:    ; ../win.sh trace waiting
 win-trace-py: ; ../win.sh trace-py waiting
 win-fetch:    ; ../win.sh fetch waiting

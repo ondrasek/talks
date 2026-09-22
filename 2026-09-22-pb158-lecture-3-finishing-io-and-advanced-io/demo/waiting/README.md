@@ -155,4 +155,14 @@ prove the wrong thing about the platform.
 make run              # both programs, natively (kqueue on macOS — the counts differ)
 make count            # both under strace -c (Linux only)
 make container-count  # the Linux counts above, on any machine with Docker
+
+make win-build        # the Windows twins, from macOS over SSH (../win.sh)
+make win-run          # wait_peek.exe and wait_iocp.exe, untraced (time these)
+make win-count        # both under NtTrace64, counted like strace -c (count these) — the captures come back too
+make win-trace-py     # the PyWin32 pair, the same way
 ```
+
+On the Windows machine itself: `nmake /f Makefile.msvc run`, `nmake /f
+Makefile.msvc count` (or `count-py`). Count traced, time untraced — the
+tracer slows each peek a hundredfold, which is the whole point of the pair of
+numbers on the slide.

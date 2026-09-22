@@ -19,6 +19,10 @@ run: iocost.exe
 	iocost.exe writethrough
 	iocost.exe nobuffer
 
+# `count`, as on Linux: iocost.exe prints the kernel's own count of its write
+# operations (GetProcessIoCounters) beside the timing, so `run` is the count.
+count: run
+
 # The traces the slide reads: which native calls each mode makes.
 trace: iocost.exe
 	$(TRACE) -Out NtTrace64-IOCOST-flush.txt -filter NtWriteFile,NtFlushBuffersFile,NtCreateFile iocost.exe flush
