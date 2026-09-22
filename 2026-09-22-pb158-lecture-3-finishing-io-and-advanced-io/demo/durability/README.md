@@ -224,11 +224,22 @@ writer is the source to read, not this trace.
 
 ```sh
 make run              # the four modes, natively, timings only
-make watch            # the prediction (Linux only — reads /proc/meminfo)
+make watch            # the prediction, Linux: watch_dirty.py reads /proc/meminfo
 make count            # the four-mode syscall counts (Linux only)
 make container-watch  # the watch above, on any machine with Docker
 make container-count  # the counts above, on any machine with Docker
+
+make win-build        # the Windows half, from macOS over SSH (../win.sh): iocost.exe
+make win-run          # iocost.exe, the four modes
+make win-watch        # the prediction, Windows: watch_dirty_win32.py (PyWin32) — save.py, then the Cache Manager's dirty pages until they drain
+make win-trace        # iocost.exe under NtTrace64, captures fetched back
 ```
+
+On the Windows machine itself, from an x64 Developer Command Prompt in this
+folder: `nmake /f Makefile.msvc run`, `nmake /f Makefile.msvc watch`,
+`nmake /f Makefile.msvc trace`. The watch writes a 4 MiB file (100 × 40960
+bytes) and samples for up to 90 s; a busy machine makes the baseline noisy,
+so run it on a quiet one.
 
 The `Dirty` figure is the kernel's, so it includes whatever else the machine
 is writing. Run it on a quiet machine; if it never returns to baseline, the

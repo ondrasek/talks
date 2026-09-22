@@ -5,6 +5,7 @@
 #   ./win.sh sync                     copy the demo folders to the Windows machine
 #   ./win.sh build  [folder]          nmake /f Makefile.msvc all   (x64 tool-chain via vcvars64)
 #   ./win.sh run    [folder]          the folder's `run` target
+#   ./win.sh watch                    durability's `watch` target: watch_dirty_win32.py — save.py, then the Cache Manager's dirty pages until they drain (~90 s max)
 #   ./win.sh trace  [folder]          the folder's `trace` target (NtTrace64), then fetch the captures
 #   ./win.sh trace-py [folder]        the PyWin32 variants under NtTrace64, then fetch
 #   ./win.sh fetch  [folder]          copy NtTrace64-*.txt captures back and count them
@@ -51,6 +52,7 @@ cmd_setup() {
 cmd_sync()  { "${SCP[@]}" -r $(folders "$@") nttrace-count.py "$WIN_HOST:${WIN_DIR}/"; echo "synced: $(folders "$@")"; }
 cmd_build() { for f in $(folders "$@"); do echo "== build $f"; nmake "$f" all; done; }
 cmd_run()   { for f in $(folders "$@"); do echo "== run $f"; nmake "$f" run; done; }
+cmd_watch() { echo "== watch durability"; nmake durability watch; }
 cmd_trace() { for f in $(folders "$@"); do echo "== trace $f"; nmake "$f" trace; done; cmd_fetch "$@"; }
 cmd_trace_py() { for f in $(folders "$@"); do echo "== trace-py $f"; nmake "$f" trace-py; done; cmd_fetch "$@"; }
 cmd_fetch() {
@@ -64,6 +66,7 @@ case "${1:-help}" in
   sync)  shift; cmd_sync "$@" ;;
   build) shift; cmd_build "$@" ;;
   run)   shift; cmd_run "$@" ;;
+  watch) cmd_watch ;;
   trace) shift; cmd_trace "$@" ;;
   trace-py) shift; cmd_trace_py "$@" ;;
   fetch) shift; cmd_fetch "$@" ;;
