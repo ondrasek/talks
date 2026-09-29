@@ -1,0 +1,5 @@
+# Linux 6.8.0-139-generic, strace -- version 6.8, podman version 4.9.3, docker 29.7.2 (rootless)
+# sudo strace -f -Y -e trace=clone,clone3,unshare,setns -p $(pgrep -u $USER -x containerd), then: docker run --rm alpine true
+<runc:[1:CHILD]> unshare(CLONE_NEWTIME|CLONE_NEWNS|CLONE_NEWCGROUP|CLONE_NEWUTS|CLONE_NEWIPC|CLONE_NEWPID|CLONE_NEWNET) = 0
+<runc> unshare(CLONE_FS)         = 0
+<runc> setns(14, CLONE_NEWNS)    = 0

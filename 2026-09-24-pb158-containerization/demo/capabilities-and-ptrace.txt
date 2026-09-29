@@ -1,0 +1,43 @@
+# Linux 6.8.0-139-generic, podman version 4.9.3, docker 29.7.2 (rootless), Yama ptrace_scope=1
+
+## podman run --rm alpine ...
+CapInh: 0x0000000000000000=
+CapPrm: 0x00000000800405fb=cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_net_bind_service,cap_sys_chroot,cap_setfcap
+CapEff: 0x00000000800405fb=cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_net_bind_service,cap_sys_chroot,cap_setfcap
+CapBnd: 0x00000000800405fb=cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_net_bind_service,cap_sys_chroot,cap_setfcap
+CapAmb: 0x0000000000000000=
+$ strace -p 17
+strace: attach: ptrace(PTRACE_SEIZE, 17): Operation not permitted
+$ strace true   (a child strace starts itself)
+(exit 0)
+
+## podman run --rm --cap-add SYS_PTRACE alpine ...
+CapInh: 0x0000000000000000=
+CapPrm: 0x00000000800c05fb=cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_net_bind_service,cap_sys_chroot,cap_sys_ptrace,cap_setfcap
+CapEff: 0x00000000800c05fb=cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_net_bind_service,cap_sys_chroot,cap_sys_ptrace,cap_setfcap
+CapBnd: 0x00000000800c05fb=cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_net_bind_service,cap_sys_chroot,cap_sys_ptrace,cap_setfcap
+CapAmb: 0x0000000000000000=
+$ strace -p 17
+$ strace true   (a child strace starts itself)
+(exit 0)
+
+## docker run --rm alpine ...
+CapInh: 0x0000000000000000=
+CapPrm: 0x00000000a80425fb=cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_net_bind_service,cap_net_raw,cap_sys_chroot,cap_mknod,cap_audit_write,cap_setfcap
+CapEff: 0x00000000a80425fb=cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_net_bind_service,cap_net_raw,cap_sys_chroot,cap_mknod,cap_audit_write,cap_setfcap
+CapBnd: 0x00000000a80425fb=cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_net_bind_service,cap_net_raw,cap_sys_chroot,cap_mknod,cap_audit_write,cap_setfcap
+CapAmb: 0x0000000000000000=
+$ strace -p 17
+strace: attach: ptrace(PTRACE_SEIZE, 17): Operation not permitted
+$ strace true   (a child strace starts itself)
+(exit 0)
+
+## docker run --rm --cap-add SYS_PTRACE alpine ...
+CapInh: 0x0000000000000000=
+CapPrm: 0x00000000a80c25fb=cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_net_bind_service,cap_net_raw,cap_sys_chroot,cap_sys_ptrace,cap_mknod,cap_audit_write,cap_setfcap
+CapEff: 0x00000000a80c25fb=cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_net_bind_service,cap_net_raw,cap_sys_chroot,cap_sys_ptrace,cap_mknod,cap_audit_write,cap_setfcap
+CapBnd: 0x00000000a80c25fb=cap_chown,cap_dac_override,cap_fowner,cap_fsetid,cap_kill,cap_setgid,cap_setuid,cap_setpcap,cap_net_bind_service,cap_net_raw,cap_sys_chroot,cap_sys_ptrace,cap_mknod,cap_audit_write,cap_setfcap
+CapAmb: 0x0000000000000000=
+$ strace -p 17
+$ strace true   (a child strace starts itself)
+(exit 0)
