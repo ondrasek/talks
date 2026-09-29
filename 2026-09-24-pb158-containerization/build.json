@@ -1,8 +1,8 @@
 {
-  "built": "2026-09-29T13:19:18Z",
+  "built": "2026-09-29T13:29:40Z",
   "dirty": false,
-  "source_commit": "3ab8696b8e089dc6bd82f6cf07ff8724159dcc7f",
-  "source_commit_short": "3ab8696b8",
-  "stamp": "v1 · 3ab8696b8 · built 2026-09-29",
-  "version": 1
+  "source_commit": "e497e0f7b56ed655789fb72e0c7db4c193bec37c",
+  "source_commit_short": "e497e0f7b",
+  "stamp": "v2 · e497e0f7b · built 2026-09-29",
+  "version": 2
 }
