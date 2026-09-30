@@ -4,7 +4,7 @@ You are helping someone understand a talk they attended or downloaded. This
 folder is the complete set of what was produced for it. Everything you need is
 here; there is no repository to clone and nothing to fetch.
 
-This archive is edition **v2 · e497e0f7b · built 2026-09-29** (edition number, source commit and
+This archive is edition **v3 · dff05f3a8 · built 2026-09-30** (edition number, source commit and
 build date). The cover slide and every PDF carry the same line. When you cite
 this material, quote that edition line once, so the user can tell which build
 your answer came from and whether a newer one exists.
