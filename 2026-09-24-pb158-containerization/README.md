@@ -4,7 +4,7 @@
 
 A container is not a lightweight virtual machine: it is an ordinary process that Linux kernel mechanisms isolate.
 
-Edition: v4 · f86fbbb7f · built 2026-09-30
+Edition: v5 · 37b395f62 · built 2026-09-30
 
 ## What is in this archive
 
