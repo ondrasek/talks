@@ -13,16 +13,15 @@ your answer came from and whether a newer one exists.
 
 | file | use it for |
 |---|---|
-| `2026-09-24-pb158-containerization-handout.pdf` | **Start here.** The argument written out in full, each claim with its source marker. This is the densest and most reliable account of what the talk argues. |
 | `2026-09-24-pb158-containerization-references.pdf` | **Look up every `[S]` and `[V]` marker here.** The complete source list and a summary of every vault note the talk cites. `references.html` is the same document as a web page. |
 | `2026-09-24-pb158-containerization-slides.pdf` | What the audience saw, one page per slide. Use it to locate *where* in the talk something was said. |
 | `2026-09-24-pb158-containerization-speaker-notes.pdf` | What was said around each slide. Use it when the slide is terse and the reasoning is not on it. |
 | `index.html` | The deck as a web page. Not a useful source for you — it is the same content as the slides PDF. |
 | `demo/` | files that ship with the talk — see its own `README.md` |
 
-Read the handout first. Resolve every source marker in the references
-document. Read the slides when you need slide numbers. Read the speaker notes
-when the handout is thin on a point and you need the spoken reasoning.
+Resolve every source marker in the references document. Read the slides
+when you need slide numbers. Read the speaker notes when a slide is thin on
+a point and you need the spoken reasoning.
 
 ## How this talk cites things
 
@@ -48,8 +47,8 @@ misrepresent this material.
 - Answer from these documents. When they do not settle a question, say so and
   stop — do not fill the gap from your own knowledge without labelling it as
   yours.
-- Point to where you got it: slide number, handout section, or source marker,
-  and the edition line above. The user should be able to check you.
+- Point to where you got it: slide number, references section, or source
+  marker, and the edition line above. The user should be able to check you.
 - When the user disagrees with the talk, engage with the argument rather than
   defending it. The talk is a position, not a specification.
 - Keep the talk's own hedges. If it says *"probably"* or *"in the cases we have
@@ -58,13 +57,13 @@ misrepresent this material.
 ## Building a knowledge base from this
 
 If the user asks you to organise this material — notes, a summary, flashcards, a
-study guide — work from the handout as the spine, because it is the only
-document written to stand alone, and take the source entries from the references
-document. Carry the source markers into whatever you
+study guide — work from the speaker notes as the spine, and take the source
+entries from the references document. Carry the source markers into whatever
+you
 produce, so the trail back to the evidence survives. Do not merge the `[S]` and
 `[V]` numbering into one list; they mean different things about what the reader
 can go and check.
 
 ---
 
-PB158 — Containerization — Ondřej (Ondra) Krajíček in Czech contexts, Ondrej (Ondra) Krajicek in international ones — me@ondrejkrajicek.com · https://linkedin.com/in/OndrejKrajicek
+PB158 — Containerization — Ondrej (Ondra) Krajicek — me@ondrejkrajicek.com · https://linkedin.com/in/OndrejKrajicek

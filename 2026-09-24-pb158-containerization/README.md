@@ -11,7 +11,6 @@ Edition: v5 · 37b395f62 · built 2026-09-30
 | file | what it is |
 |---|---|
 | `2026-09-24-pb158-containerization-slides.pdf` | the deck, one page per slide |
-| `2026-09-24-pb158-containerization-handout.pdf` | the written version: the deck's claims as prose, each with its source marker |
 | `2026-09-24-pb158-containerization-references.pdf` | every source the talk cites, and a one-page summary of each vault note |
 | `references.html` | the same references as a web page |
 | `2026-09-24-pb158-containerization-speaker-notes.pdf` | the notes the talk was given from |
@@ -22,9 +21,8 @@ Edition: v5 · 37b395f62 · built 2026-09-30
 ## Reading it
 
 Start with the slides if you were in the room and want the argument back.
-Start with the **handout** if you were not: it is the deck's claims written out,
-and every claim carries a numbered source. The **references** document
-(`2026-09-24-pb158-containerization-references.pdf`) resolves every number.
+The **references** document (`2026-09-24-pb158-containerization-references.pdf`) resolves every numbered
+source the slides carry.
 
 The edition line at the top names the build: the edition number, the commit it
 was built from and the build date. The cover slide, every PDF and these files
@@ -54,4 +52,4 @@ do not settle a question, rather than filling the gap.
 
 ---
 
-Ondřej (Ondra) Krajíček in Czech contexts, Ondrej (Ondra) Krajicek in international ones — me@ondrejkrajicek.com · https://linkedin.com/in/OndrejKrajicek
+Ondrej (Ondra) Krajicek — me@ondrejkrajicek.com · https://linkedin.com/in/OndrejKrajicek
