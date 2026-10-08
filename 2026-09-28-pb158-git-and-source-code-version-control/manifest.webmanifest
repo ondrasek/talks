@@ -1,0 +1,33 @@
+{
+  "name": "PB158 \u2014 Git and Source Code Version Control",
+  "short_name": "PB158",
+  "description": "Git gives you a content-addressed object graph and a way to move pointers into it. Branching strategy, pull requests, code review and CI/CD are policy your team layered on top, not features Git provides.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#fbfbf9",
+  "theme_color": "#fbfbf9",
+  "lang": "en",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
